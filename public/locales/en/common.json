@@ -1,0 +1,49 @@
+{
+  "appName": "SamenWonen",
+  "nav_how_it_works": "How it works",
+  "nav_for_students": "For students",
+  "nav_for_homes": "For care homes",
+  "nav_for_municipalities": "For municipalities",
+  "nav_contact": "Contact",
+
+  "hero_title": "SamenWonen",
+  "hero_subtitle": "Students and seniors together under one roof. A unique opportunity for intergenerational connection and affordable housing.",
+  "hero_cta1": "Discover how it works",
+  "hero_cta2": "Get in touch",
+
+  "how_it_works_title": "How does it work?",
+  "how_it_works_step1_title": "Sign Up",
+  "how_it_works_step1_desc": "Students and care homes can register via our platform.",
+  "how_it_works_step2_title": "Matching",
+  "how_it_works_step2_desc": "We ensure the right match between students and care homes.",
+  "how_it_works_step3_title": "Living Together",
+  "how_it_works_step3_desc": "Students live in the care home and contribute to the community.",
+
+  "testimonials_title": "Experiences",
+  "testimonial1_quote": "\"As a student, I found a nice place to live and learn a lot from the elderly. The contact is valuable and I really feel part of the community.\"",
+  "testimonial2_quote": "\"The presence of students brings life to the place. They are so enthusiastic and help us with all kinds of activities. It is an enrichment for all of us.\"",
+
+  "cta_title": "Ready to join?",
+  "cta_subtitle": "Join our network of care homes, students, and municipalities working together for a better future.",
+  "cta_button": "Sign Up",
+
+  "blog_section_title": "Latest News",
+  "blog_read_more": "Read More",
+
+  "faq_title": "Frequently Asked Questions",
+
+  "stat_matches": "Successful Matches",
+  "stat_homes": "Participating Care Homes",
+  "stat_satisfaction": "Satisfaction Rate",
+  "stat_hours": "Hours of Social Contact",
+
+  "map_title_fallback": "Our Locations",
+  "map_title": "Available Locations",
+  "map_status_active": "Active",
+  "map_status_soon": "Coming Soon",
+  "map_more_info": "More Info",
+  "map_loading_message": "We are currently active in various cities in the Netherlands. Check out where you can find us!",
+  "map_available_rooms": "Available Rooms",
+  "map_rooms": "rooms",
+  "map_amenities": "Amenities"
+} 

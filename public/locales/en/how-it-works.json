@@ -1,0 +1,32 @@
+{
+  "page_title": "How SamenWonen Works",
+  "page_subtitle": "Discover the simple steps to join our intergenerational living community, connecting students and seniors.",
+  "step_label": "Step {{count}}",
+
+  "step1_title": "Registration and Profile",
+  "step1_desc": "Start by creating your personal profile.",
+  "step1_details": "Both students looking for housing and care homes offering space register on our secure platform. Fill in your details, preferences, and what you expect from living together. This helps us understand your needs.",
+
+  "step2_title": "Careful Matching Process",
+  "step2_desc": "We find the best possible match based on compatibility.",
+  "step2_details": "Our team uses a combination of profile information, personal interviews (if necessary), and algorithms to find suitable matches. We focus on shared interests, lifestyle compatibility, and mutual expectations to ensure a harmonious living arrangement.",
+
+  "step3_title": "Introduction and Moving In",
+  "step3_desc": "Meet your potential match and start your journey.",
+  "step3_details": "Once a potential match is found, we facilitate an introduction meeting. If both parties agree, we finalize the arrangements, sign the necessary agreements, and help coordinate the move-in process. Our team provides ongoing support to ensure a smooth transition.",
+
+  "benefits_title": "Mutual Benefits",
+  "benefits_students_title": "For Students",
+  "benefits_students_item1": "Affordable and safe housing.",
+  "benefits_students_item2": "Meaningful social interaction.",
+  "benefits_students_item3": "Personal growth and life experience.",
+  "benefits_seniors_title": "For Seniors & Care Homes",
+  "benefits_seniors_item1": "Increased vitality and companionship.",
+  "benefits_seniors_item2": "Help with daily tasks and technology.",
+  "benefits_seniors_item3": "Strengthened community feeling.",
+
+  "cta_title": "Ready to Take the Next Step?",
+  "cta_subtitle": "Have more questions? Check our FAQ or get in touch with our team directly.",
+  "cta_button_contact": "Contact Us",
+  "cta_button_faq": "View FAQ"
+} 

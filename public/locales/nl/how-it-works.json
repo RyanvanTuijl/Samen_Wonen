@@ -1,0 +1,32 @@
+{
+  "page_title": "Hoe SamenWonen Werkt",
+  "page_subtitle": "Ontdek de eenvoudige stappen om deel te nemen aan onze intergenerationele woongemeenschap, die studenten en senioren verbindt.",
+  "step_label": "Stap {{count}}",
+
+  "step1_title": "Registratie en Profiel",
+  "step1_desc": "Begin met het aanmaken van je persoonlijke profiel.",
+  "step1_details": "Zowel studenten die huisvesting zoeken als verzorgingshuizen die ruimte bieden, registreren zich op ons beveiligde platform. Vul je gegevens, voorkeuren en verwachtingen van het samenwonen in. Dit helpt ons jouw behoeften te begrijpen.",
+
+  "step2_title": "Zorgvuldig Matchingsproces",
+  "step2_desc": "We vinden de best mogelijke match op basis van compatibiliteit.",
+  "step2_details": "Ons team gebruikt een combinatie van profielinformatie, persoonlijke gesprekken (indien nodig) en algoritmen om geschikte matches te vinden. We focussen op gedeelde interesses, verenigbaarheid van levensstijl en wederzijdse verwachtingen om een harmonieuze woonomgeving te garanderen.",
+
+  "step3_title": "Kennismaking en Verhuizing",
+  "step3_desc": "Ontmoet je potentiële match en begin je reis.",
+  "step3_details": "Zodra een potentiële match is gevonden, faciliteren we een kennismakingsgesprek. Als beide partijen akkoord gaan, ronden we de regelingen af, ondertekenen de nodige overeenkomsten en helpen we bij het coördineren van de verhuizing. Ons team biedt doorlopende ondersteuning voor een soepele overgang.",
+
+  "benefits_title": "Wederzijdse Voordelen",
+  "benefits_students_title": "Voor Studenten",
+  "benefits_students_item1": "Betaalbare en veilige huisvesting.",
+  "benefits_students_item2": "Betekenisvolle sociale interactie.",
+  "benefits_students_item3": "Persoonlijke groei en levenservaring.",
+  "benefits_seniors_title": "Voor Senioren & Verzorgingshuizen",
+  "benefits_seniors_item1": "Verhoogde vitaliteit en gezelschap.",
+  "benefits_seniors_item2": "Hulp bij dagelijkse taken en technologie.",
+  "benefits_seniors_item3": "Versterkt gemeenschapsgevoel.",
+
+  "cta_title": "Klaar voor de Volgende Stap?",
+  "cta_subtitle": "Heb je nog vragen? Bekijk onze FAQ of neem direct contact op met ons team.",
+  "cta_button_contact": "Neem Contact Op",
+  "cta_button_faq": "Bekijk FAQ"
+} 

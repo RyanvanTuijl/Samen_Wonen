@@ -1,0 +1,49 @@
+{
+  "appName": "SamenWonen",
+  "nav_how_it_works": "Hoe het werkt",
+  "nav_for_students": "Voor studenten",
+  "nav_for_homes": "Voor verzorgingstehuizen",
+  "nav_for_municipalities": "Voor gemeenten",
+  "nav_contact": "Contact",
+
+  "hero_title": "SamenWonen",
+  "hero_subtitle": "Studenten en ouderen samen onder één dak. Een unieke kans voor intergenerationele verbinding en betaalbare huisvesting.",
+  "hero_cta1": "Ontdek hoe het werkt",
+  "hero_cta2": "Neem contact op",
+
+  "how_it_works_title": "Hoe werkt het?",
+  "how_it_works_step1_title": "Aanmelden",
+  "how_it_works_step1_desc": "Studenten en verzorgingstehuizen kunnen zich aanmelden via ons platform.",
+  "how_it_works_step2_title": "Matchen",
+  "how_it_works_step2_desc": "Wij zorgen voor de juiste match tussen studenten en verzorgingstehuizen.",
+  "how_it_works_step3_title": "Samenwonen",
+  "how_it_works_step3_desc": "Studenten wonen in het verzorgingstehuis en dragen bij aan de gemeenschap.",
+
+  "testimonials_title": "Ervaringen",
+  "testimonial1_quote": "\"Als student heb ik een fijne woonplek gevonden en leer ik veel van de ouderen. Het contact is waardevol en ik voel me echt onderdeel van de gemeenschap.\"",
+  "testimonial2_quote": "\"De aanwezigheid van studenten brengt leven in de brouwerij. Ze zijn zo enthousiast en helpen ons met allerlei activiteiten. Het is een verrijking voor ons allemaal.\"",
+
+  "cta_title": "Klaar om mee te doen?",
+  "cta_subtitle": "Sluit je aan bij ons netwerk van verzorgingstehuizen, studenten en gemeenten die samenwerken aan een betere toekomst.",
+  "cta_button": "Meld je aan",
+
+  "blog_section_title": "Laatste Nieuws",
+  "blog_read_more": "Lees Meer",
+
+  "faq_title": "Veelgestelde Vragen",
+
+  "stat_matches": "Succesvolle Matches",
+  "stat_homes": "Deelnemende Verzorgingshuizen",
+  "stat_satisfaction": "Tevredenheidsscore",
+  "stat_hours": "Uren Sociaal Contact",
+
+  "map_title_fallback": "Onze Locaties",
+  "map_title": "Beschikbare Locaties",
+  "map_status_active": "Actief",
+  "map_status_soon": "Binnenkort",
+  "map_more_info": "Meer Info",
+  "map_loading_message": "We zijn momenteel actief in verschillende steden in Nederland. Bekijk waar je ons kunt vinden!",
+  "map_available_rooms": "Beschikbare Kamers",
+  "map_rooms": "kamers",
+  "map_amenities": "Voorzieningen"
+} 
