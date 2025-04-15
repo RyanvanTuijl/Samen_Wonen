@@ -1,13 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
-import acceptLanguage from 'accept-language';
-// Removed import of settings
-// import { fallbackLng, locales } from './app/i18n/settings';
 
-// Define locales and fallback directly in middleware
 const locales = ['nl', 'en'];
 const fallbackLng = 'nl';
-
-acceptLanguage.languages([...locales]);
 
 const PUBLIC_FILE = /\.(.*)$/;
 
@@ -24,15 +18,21 @@ export function middleware(request: NextRequest) {
   }
 
   // Check if the pathname already has a locale
-  const pathnameHasLocale = pathname.startsWith('/nl/') || pathname.startsWith('/en/');
+  const pathnameHasLocale = locales.some(
+    locale => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
+  );
 
   if (!pathnameHasLocale) {
-    // Get preferred locale from cookie or accept-language header
-    const preferredLocale = request.cookies.get('NEXT_LOCALE')?.value || 'nl';
+    // Get preferred locale from cookie or use fallback
+    const locale = request.cookies.get('NEXT_LOCALE')?.value || fallbackLng;
+
+    // Handle root path specially
+    if (pathname === '/') {
+      return NextResponse.redirect(new URL(`/${locale}`, request.url));
+    }
 
     // Redirect to the same pathname but with locale prefix
-    request.nextUrl.pathname = `/${preferredLocale}${pathname}`;
-    return NextResponse.redirect(request.nextUrl);
+    return NextResponse.redirect(new URL(`/${locale}${pathname}`, request.url));
   }
 
   return NextResponse.next();
