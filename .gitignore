@@ -33,7 +33,35 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Personal directories and files to ignore
+/AppData/
+/Contacts/
+/Downloads/
+/Favorites/
+/Links/
+/Music/
+/OneDrive*/
+/Saved Games/
+/Searches/
+/Videos/
+/.cache/
+/.cursor/
+/.idlerc/
+/.matplotlib/
+NTUSER.DAT*
+ntuser.*
+
 # system files
-AppData/
 *.bin
 *.blb 
