@@ -232,70 +232,35 @@ const LocationModal: React.FC<LocationModalProps> = ({ location, onClose }) => {
 };
 
 export default function InteractiveMap() {
+  const [selectedLocation, setSelectedLocation] = useState<Location | null>(null);
   const pathname = usePathname();
   const locale = pathname.split('/')[1] || 'nl';
   const { t } = useTranslation(locale, 'common');
-  
-  const [mounted, setMounted] = useState(false);
-  const [selectedLocation, setSelectedLocation] = useState<Location | null>(null);
+  const [mapLoaded, setMapLoaded] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
+    // Cleanup function for map
+    return () => {
+      if (typeof window !== 'undefined') {
+        // Clean up any map instances
+        const mapContainer = document.querySelector('.leaflet-container');
+        if (mapContainer) {
+          // @ts-ignore
+          if (mapContainer._leaflet_id) {
+            // @ts-ignore
+            mapContainer._leaflet = null;
+          }
+        }
+      }
+    };
   }, []);
 
-  useEffect(() => {
-    if (mounted && typeof window !== 'undefined') {
-      // Import Leaflet only on client side
-      import('leaflet').then((L) => {
-        // Set default icon for markers
-        L.Marker.prototype.options.icon = L.icon({
-          iconUrl: '/marker-icon.svg',
-          iconSize: [24, 36],
-          iconAnchor: [12, 36],
-          popupAnchor: [0, -36],
-        });
-      });
-    }
-  }, [mounted]);
-
-  if (!mounted) {
+  if (typeof window === 'undefined') {
     return (
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="section-title text-center mb-12">{t('map_title_fallback')}</h2>
-          <div className="bg-gray-100 p-8 rounded-lg">
-            <div className="text-center mb-8">
-              <p className="text-xl text-gray-700 mb-4">
-                {t('map_loading_message')}
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {locations.map((location) => (
-                <div
-                  key={location.id}
-                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
-                >
-                  <h3 className="text-xl font-semibold mb-2">{location.name}</h3>
-                  <p className="text-gray-600 mb-2">{location.city}</p>
-                  <span
-                    className={`inline-block px-3 py-1 rounded-full text-sm ${
-                      location.type === 'active'
-                        ? 'bg-green-100 text-green-800'
-                        : 'bg-yellow-100 text-yellow-800'
-                    }`}
-                  >
-                    {location.type === 'active' ? t('map_status_active') : t('map_status_soon')}
-                  </span>
-                  <button
-                    onClick={() => setSelectedLocation(location)}
-                    className="btn-primary mt-3 text-sm py-1 px-3 w-full"
-                  >
-                    {t('map_more_info')}
-                  </button>
-                </div>
-              ))}
-            </div>
-          </div>
+      <section className="py-24 bg-gray-50">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="section-title">{t('map_title_fallback')}</h2>
+          <p className="text-gray-600">{t('map_loading_message')}</p>
         </div>
       </section>
     );
@@ -305,39 +270,34 @@ export default function InteractiveMap() {
     <section className="py-24 bg-gray-50">
       <div className="container mx-auto px-4">
         <h2 className="section-title text-center mb-12">{t('map_title')}</h2>
-        <div className="h-[600px] rounded-lg overflow-hidden shadow-lg relative">
+        <div className="h-[600px] rounded-lg overflow-hidden shadow-lg">
           <MapContainer
-            center={[52.1326, 5.2913]} // Centered on Netherlands
+            center={[52.1326, 5.2913]}
             zoom={7}
-            style={{ height: '100%', width: '100%' }}
-            scrollWheelZoom={false}
-            className="z-0"
+            className="w-full h-full"
+            whenReady={() => setMapLoaded(true)}
           >
             <TileLayer
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            {locations.map((location) => (
-              <Marker key={location.id} position={location.coordinates}>
+            {mapLoaded && locations.map((location) => (
+              <Marker
+                key={location.id}
+                position={[location.coordinates.lat, location.coordinates.lng]}
+                eventHandlers={{
+                  click: () => setSelectedLocation(location),
+                }}
+              >
                 <Popup>
                   <div className="p-2">
-                    <h3 className="font-bold text-lg">{location.name}</h3>
-                    <p className="text-gray-600">{location.city}</p>
-                    <span
-                      className={`inline-block px-3 py-1 rounded-full text-sm ${
-                        location.type === 'active'
-                          ? 'bg-green-100 text-green-800'
-                          : 'bg-yellow-100 text-yellow-800'
-                      }`}
-                    >
-                      {location.type === 'active' ? t('map_status_active') : t('map_status_soon')}
+                    <h3 className="font-bold">{location.name}</h3>
+                    <p className="text-sm text-gray-600">{location.city}</p>
+                    <span className={`inline-block px-2 py-1 rounded text-xs ${
+                      location.type === 'active' ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'
+                    }`}>
+                      {t(location.type === 'active' ? 'map_status_active' : 'map_status_soon')}
                     </span>
-                    <button
-                      onClick={() => setSelectedLocation(location)}
-                      className="btn-primary mt-3 text-sm py-1 px-3 w-full"
-                    >
-                      {t('map_more_info')}
-                    </button>
                   </div>
                 </Popup>
               </Marker>
@@ -346,12 +306,10 @@ export default function InteractiveMap() {
         </div>
       </div>
       {selectedLocation && (
-        <div className="fixed inset-0 z-[9999]">
-          <LocationModal
-            location={selectedLocation}
-            onClose={() => setSelectedLocation(null)}
-          />
-        </div>
+        <LocationModal
+          location={selectedLocation}
+          onClose={() => setSelectedLocation(null)}
+        />
       )}
     </section>
   );
