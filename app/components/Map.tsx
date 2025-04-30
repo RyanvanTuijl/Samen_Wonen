@@ -24,6 +24,10 @@ const Popup = dynamic(
   () => import('react-leaflet').then((mod) => mod.Popup),
   { ssr: false }
 );
+const Icon = dynamic(
+  () => import('leaflet').then((L) => L.Icon),
+  { ssr: false }
+);
 
 interface Location {
   id: number;
@@ -185,8 +189,8 @@ const LocationModal: React.FC<LocationModalProps> = ({ location, onClose }) => {
   if (!location) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-      <div className="bg-white rounded-lg max-w-2xl w-full p-6 relative">
+    <div className="fixed inset-0 bg-black bg-opacity-50 z-[1000] flex items-center justify-center p-4">
+      <div className="bg-white rounded-lg max-w-2xl w-full p-6 relative z-[1001]">
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
@@ -237,8 +241,48 @@ export default function InteractiveMap() {
   const locale = pathname.split('/')[1] || 'nl';
   const { t } = useTranslation(locale, 'common');
   const [mapLoaded, setMapLoaded] = useState(false);
+  const [isMapInitialized, setIsMapInitialized] = useState(false);
+  
+  // Custom marker icons
+  const [activeIcon, setActiveIcon] = useState<any>(null);
+  const [comingSoonIcon, setComingSoonIcon] = useState<any>(null);
 
   useEffect(() => {
+    // Initialize map and set flag when map is ready
+    if (typeof window !== 'undefined' && !isMapInitialized) {
+      // Load Leaflet CSS dynamically to ensure it's available
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+      link.integrity = 'sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=';
+      link.crossOrigin = '';
+      document.head.appendChild(link);
+      
+      // Initialize custom marker icons
+      import('leaflet').then((L) => {
+        setActiveIcon(new L.Icon({
+          iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+          shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+          iconSize: [25, 41],
+          iconAnchor: [12, 41],
+          popupAnchor: [1, -34],
+          shadowSize: [41, 41]
+        }));
+        
+        setComingSoonIcon(new L.Icon({
+          iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png',
+          shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+          iconSize: [25, 41],
+          iconAnchor: [12, 41],
+          popupAnchor: [1, -34],
+          shadowSize: [41, 41]
+        }));
+      });
+      
+      // Set initialization flag
+      setIsMapInitialized(true);
+    }
+    
     // Cleanup function for map
     return () => {
       if (typeof window !== 'undefined') {
@@ -253,14 +297,17 @@ export default function InteractiveMap() {
         }
       }
     };
-  }, []);
+  }, [isMapInitialized]);
 
-  if (typeof window === 'undefined') {
+  if (typeof window === 'undefined' || !isMapInitialized) {
     return (
       <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4 text-center">
           <h2 className="section-title">{t('map_title_fallback')}</h2>
-          <p className="text-gray-600">{t('map_loading_message')}</p>
+          <p className="text-gray-600 mb-6">{t('map_loading_message')}</p>
+          <div className="flex justify-center">
+            <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-primary"></div>
+          </div>
         </div>
       </section>
     );
@@ -275,21 +322,35 @@ export default function InteractiveMap() {
             center={[52.1326, 5.2913]}
             zoom={7}
             className="w-full h-full"
-            whenReady={() => setMapLoaded(true)}
+            whenReady={() => {
+              setMapLoaded(true);
+              // Force a re-render of markers after map is loaded
+              setTimeout(() => {
+                const event = new Event('resize');
+                window.dispatchEvent(event);
+              }, 100);
+            }}
+            preferCanvas={true}
           >
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              eventHandlers={{
+                load: () => {
+                  console.log('Tile layer loaded');
+                }
+              }}
             />
-            {mapLoaded && locations.map((location) => (
+            {mapLoaded && activeIcon && comingSoonIcon && locations.map((location) => (
               <Marker
                 key={location.id}
                 position={[location.coordinates.lat, location.coordinates.lng]}
+                icon={location.type === 'active' ? activeIcon : comingSoonIcon}
                 eventHandlers={{
                   click: () => setSelectedLocation(location),
                 }}
               >
-                <Popup>
+                <Popup className="map-popup">
                   <div className="p-2">
                     <h3 className="font-bold">{location.name}</h3>
                     <p className="text-sm text-gray-600">{location.city}</p>
@@ -313,4 +374,4 @@ export default function InteractiveMap() {
       )}
     </section>
   );
-} 
+}

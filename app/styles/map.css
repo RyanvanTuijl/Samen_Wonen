@@ -10,6 +10,14 @@
 
 .leaflet-marker-icon {
   filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
+  width: 25px !important;
+  height: 41px !important;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.leaflet-popup {
+  z-index: 1000 !important;
 }
 
 .leaflet-popup-content-wrapper {
@@ -19,4 +27,14 @@
 
 .leaflet-popup-tip {
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-} 
+}
+
+/* Improve marker visibility */
+.leaflet-marker-pane {
+  z-index: 600;
+}
+
+/* Ensure popup content is above map */
+.leaflet-popup-pane {
+  z-index: 700;
+}
