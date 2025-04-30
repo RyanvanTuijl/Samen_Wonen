@@ -24,10 +24,13 @@ const Popup = dynamic(
   () => import('react-leaflet').then((mod) => mod.Popup),
   { ssr: false }
 );
-const Icon = dynamic(
-  () => import('leaflet').then((L) => L.Icon),
-  { ssr: false }
-);
+// Import the Leaflet types for TypeScript support
+import type { Icon as LeafletIcon } from 'leaflet';
+
+// Define a type for the Leaflet module
+interface LeafletModule {
+  Icon: new (options: any) => LeafletIcon;
+}
 
 interface Location {
   id: number;
@@ -244,8 +247,8 @@ export default function InteractiveMap() {
   const [isMapInitialized, setIsMapInitialized] = useState(false);
   
   // Custom marker icons
-  const [activeIcon, setActiveIcon] = useState<any>(null);
-  const [comingSoonIcon, setComingSoonIcon] = useState<any>(null);
+  const [activeIcon, setActiveIcon] = useState<LeafletIcon | null>(null);
+  const [comingSoonIcon, setComingSoonIcon] = useState<LeafletIcon | null>(null);
 
   useEffect(() => {
     // Initialize map and set flag when map is ready
@@ -259,7 +262,7 @@ export default function InteractiveMap() {
       document.head.appendChild(link);
       
       // Initialize custom marker icons
-      import('leaflet').then((L) => {
+      import('leaflet').then((L: LeafletModule) => {
         setActiveIcon(new L.Icon({
           iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
           shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
