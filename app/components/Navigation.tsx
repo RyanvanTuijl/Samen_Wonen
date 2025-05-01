@@ -47,22 +47,28 @@ export default function Navigation({ isHome = false }: NavigationProps) {
               {t('nav_how_it_works')}
             </Link>
             <Link 
-              href={createLocalePath('/for-students')} 
+              href={createLocalePath('/events')} 
               className={`nav-link ${isHome ? 'text-gray-700 hover:text-black' : ''}`}
             >
-              {t('nav_for_students')}
+              {t('nav_events')}
             </Link>
             <Link 
-              href={createLocalePath('/for-homes')} 
+              href={createLocalePath('/calculator')} 
               className={`nav-link ${isHome ? 'text-gray-700 hover:text-black' : ''}`}
             >
-              {t('nav_for_homes')}
+              {t('nav_calculator')}
             </Link>
             <Link 
-              href={createLocalePath('/for-municipalities')} 
+              href={createLocalePath('/wishlist')} 
               className={`nav-link ${isHome ? 'text-gray-700 hover:text-black' : ''}`}
             >
-              {t('nav_for_municipalities')}
+              {t('nav_wishlist')}
+            </Link>
+            <Link 
+              href={createLocalePath('/transport')} 
+              className={`nav-link ${isHome ? 'text-gray-700 hover:text-black' : ''}`}
+            >
+              {t('nav_transport')}
             </Link>
             <Link 
               href={createLocalePath('/contact')} 
@@ -154,4 +160,4 @@ export default function Navigation({ isHome = false }: NavigationProps) {
       </div>
     </nav>
   );
-} 
+}
