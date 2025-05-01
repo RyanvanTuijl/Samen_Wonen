@@ -10,7 +10,7 @@ import { usePathname } from 'next/navigation';
 // Dynamically import the map components with no SSR
 const MapContainer = dynamic(
   () => import('react-leaflet').then((mod) => mod.MapContainer),
-  { ssr: false }
+  { ssr: false, loading: () => <div className="w-full h-full flex items-center justify-center bg-gray-100"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div></div> }
 );
 const TileLayer = dynamic(
   () => import('react-leaflet').then((mod) => mod.TileLayer),
@@ -22,6 +22,20 @@ const Marker = dynamic(
 );
 const Popup = dynamic(
   () => import('react-leaflet').then((mod) => mod.Popup),
+  { ssr: false }
+);
+// Define the MarkerClusterGroup props interface
+interface MarkerClusterGroupProps {
+  children: React.ReactNode;
+  chunkedLoading?: boolean;
+  maxClusterRadius?: number;
+  spiderfyOnMaxZoom?: boolean;
+  showCoverageOnHover?: boolean;
+  zoomToBoundsOnClick?: boolean;
+}
+
+const MarkerClusterGroup = dynamic<MarkerClusterGroupProps>(
+  () => import('@changey/react-leaflet-markercluster').then((mod) => mod.default),
   { ssr: false }
 );
 // Import the Leaflet types for TypeScript support
@@ -245,6 +259,8 @@ export default function InteractiveMap() {
   const { t } = useTranslation(locale, 'common');
   const [mapLoaded, setMapLoaded] = useState(false);
   const [isMapInitialized, setIsMapInitialized] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [isLoadingMarkers, setIsLoadingMarkers] = useState(true);
   
   // Custom marker icons
   const [activeIcon, setActiveIcon] = useState<LeafletIcon | null>(null);
@@ -344,28 +360,36 @@ export default function InteractiveMap() {
                 }
               }}
             />
-            {mapLoaded && activeIcon && comingSoonIcon && locations.map((location) => (
-              <Marker
-                key={location.id}
-                position={[location.coordinates.lat, location.coordinates.lng]}
-                icon={location.type === 'active' ? activeIcon : comingSoonIcon}
-                eventHandlers={{
-                  click: () => setSelectedLocation(location),
-                }}
+            {mapLoaded && activeIcon && comingSoonIcon && (
+              <MarkerClusterGroup
+                chunkedLoading
+                maxClusterRadius={50}
+                spiderfyOnMaxZoom
+                showCoverageOnHover={false}
+                zoomToBoundsOnClick
               >
-                <Popup className="map-popup">
-                  <div className="p-2">
-                    <h3 className="font-bold">{location.name}</h3>
-                    <p className="text-sm text-gray-600">{location.city}</p>
-                    <span className={`inline-block px-2 py-1 rounded text-xs ${
-                      location.type === 'active' ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'
-                    }`}>
-                      {t(location.type === 'active' ? 'map_status_active' : 'map_status_soon')}
-                    </span>
-                  </div>
+                {locations.map((location) => (
+                  <Marker
+                    key={location.id}
+                    position={[location.coordinates.lat, location.coordinates.lng]}
+                    icon={location.type === 'active' ? activeIcon : comingSoonIcon}
+                    eventHandlers={{
+                      click: () => setSelectedLocation(location),
+                    }}
+                  >
+                    <Popup className="map-popup">
+                      <div className="p-2">
+                        <h3 className="font-bold">{location.name}</h3>
+                        <p className="text-sm text-gray-600">{location.city}</p>
+                        <span className={`inline-block px-2 py-1 rounded text-xs ${location.type === 'active' ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'}`}>
+                          {t(location.type === 'active' ? 'map_status_active' : 'map_status_soon')}
+                        </span>
+                      </div>
                 </Popup>
               </Marker>
             ))}
+              </MarkerClusterGroup>
+            )}
           </MapContainer>
         </div>
       </div>
