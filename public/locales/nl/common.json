@@ -12,6 +12,17 @@
   "hero_cta1": "Ontdek hoe het werkt",
   "hero_cta2": "Neem contact op",
 
+  "role_selection_title": "Welkom bij SamenWonen",
+  "role_selection_subtitle": "Selecteer uw rol voor op maat gemaakte informatie",
+  "role_student_title": "Ik ben een Student",
+  "role_student_desc": "Op zoek naar betaalbare woonruimte en een unieke woonervaring",
+  "role_senior_title": "Ik ben een Oudere",
+  "role_senior_desc": "Geïnteresseerd in het delen van mijn huis en verbinden met jongere generaties",
+  "role_homeowner_title": "Ik ben een Huiseigenaar",
+  "role_homeowner_desc": "Wil woonruimte aanbieden voor het intergenerationeel woonprogramma",
+  "role_select_button": "Selecteer Rol",
+  "change_role": "Wijzig Rol",
+
   "how_it_works_title": "Hoe werkt het?",
   "how_it_works_step1_title": "Aanmelden",
   "how_it_works_step1_desc": "Studenten en verzorgingstehuizen kunnen zich aanmelden via ons platform.",
@@ -46,17 +57,5 @@
   "map_loading_message": "We zijn momenteel actief in verschillende steden in Nederland. Bekijk waar je ons kunt vinden!",
   "map_available_rooms": "Beschikbare Kamers",
   "map_rooms": "kamers",
-  "map_amenities": "Voorzieningen",
-
-  // Role selection translations
-  "role_selection_title": "Welkom bij SamenWonen",
-  "role_selection_subtitle": "Selecteer uw rol voor op maat gemaakte informatie",
-  "role_student_title": "Ik ben een Student",
-  "role_student_desc": "Op zoek naar betaalbare woonruimte en een unieke woonervaring",
-  "role_senior_title": "Ik ben een Oudere",
-  "role_senior_desc": "Geïnteresseerd in het delen van mijn huis en verbinden met jongere generaties",
-  "role_homeowner_title": "Ik ben een Huiseigenaar",
-  "role_homeowner_desc": "Wil woonruimte aanbieden voor het intergenerationeel woonprogramma",
-  "role_select_button": "Selecteer Rol",
-  "change_role": "Wijzig Rol"
+  "map_amenities": "Voorzieningen"
 }
