@@ -11,6 +11,7 @@ import FAQ from '../components/FAQ';
 import Blog from '../components/Blog';
 import InteractiveMap from '../components/Map';
 import RoleSelection from '../components/RoleSelection';
+import RoleButton from '../components/RoleButton';
 import Image from 'next/image';
 import { useTranslation as useClientTranslation } from '../i18n/client';
 
@@ -56,13 +57,32 @@ export default function Home() {
               <p className="text-2xl md:text-3xl mb-12 leading-relaxed animate-fade-in-up">
                 {t('hero_subtitle')}
               </p>
-              <div className="flex flex-col sm:flex-row gap-6 animate-fade-in-up">
+              <div className="flex flex-col sm:flex-row items-center gap-6 animate-fade-in-up">
                 <Link href={`/${locale}/how-it-works`} className="btn-primary">
                   {t('hero_cta1')}
                 </Link>
                 <Link href={`/${locale}/contact`} className="btn-secondary">
                   {t('hero_cta2')}
                 </Link>
+                <div className="mt-4 sm:mt-0">
+                  <RoleButton />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Role Selection Banner */}
+        <section className="py-10 bg-gradient-to-r from-blue-50 to-purple-50">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col md:flex-row items-center justify-between">
+              <div className="mb-6 md:mb-0">
+                <h2 className="text-2xl font-bold text-gray-800 mb-2">{t('personalize_experience')}</h2>
+                <p className="text-gray-600">{t('personalize_description')}</p>
+              </div>
+              <div className="flex items-center gap-4">
+                <span className="text-gray-700">{t('choose_your_role')}</span>
+                <RoleButton />
               </div>
             </div>
           </div>
@@ -175,9 +195,12 @@ export default function Home() {
             <p className="text-2xl mb-12 max-w-2xl mx-auto">
               {t('cta_subtitle')}
             </p>
-            <Link href={`/${locale}/contact`} className="btn-primary">
-              {t('cta_button')}
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <Link href={`/${locale}/contact`} className="btn-primary">
+                {t('cta_button')}
+              </Link>
+              <RoleButton />
+            </div>
           </div>
         </section>
 
