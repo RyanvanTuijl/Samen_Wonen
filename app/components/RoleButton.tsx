@@ -20,19 +20,22 @@ export default function RoleButton() {
       id: 'student',
       title: t('role_student_title'),
       icon: '/icons/student.svg',
-      color: 'bg-blue-500'
+      color: 'bg-indigo-600',
+      textColor: 'text-white'
     },
     {
       id: 'senior',
       title: t('role_senior_title'),
       icon: '/icons/senior.svg',
-      color: 'bg-green-500'
+      color: 'bg-emerald-600',
+      textColor: 'text-white'
     },
     {
       id: 'homeowner',
       title: t('role_homeowner_title'),
       icon: '/icons/home.svg',
-      color: 'bg-purple-500'
+      color: 'bg-purple-700',
+      textColor: 'text-white'
     }
   ];
 
@@ -42,7 +45,8 @@ export default function RoleButton() {
       id: 'none', 
       title: t('select_your_role'), 
       icon: '/icons/register.svg',
-      color: 'bg-gray-500'
+      color: 'bg-gray-600',
+      textColor: 'text-white'
     };
   };
 
@@ -77,13 +81,13 @@ export default function RoleButton() {
         className="flex items-center space-x-2 bg-white/90 backdrop-blur-sm rounded-full px-5 py-3 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <div className={`w-8 h-8 rounded-full ${currentRoleInfo.color} flex items-center justify-center`}>
+        <div className={`w-8 h-8 rounded-full ${currentRoleInfo.color} flex items-center justify-center ${currentRoleInfo.textColor}`}>
           <Image 
             src={currentRoleInfo.icon}
             alt={currentRoleInfo.title}
-            width={16}
-            height={16}
-            className="invert"
+            width={20}
+            height={20}
+            className="brightness-[10] contrast-100"
           />
         </div>
         <span className="font-medium">{currentRoleInfo.title}</span>
@@ -107,18 +111,18 @@ export default function RoleButton() {
                 onClick={() => handleSelectRole(role.id)}
                 className="w-full px-4 py-3 text-left flex items-center space-x-3 hover:bg-gray-50 transition-colors"
               >
-                <div className={`w-8 h-8 rounded-full ${role.color} flex items-center justify-center`}>
+                <div className={`w-8 h-8 rounded-full ${role.color} flex items-center justify-center ${role.textColor}`}>
                   <Image 
                     src={role.icon}
                     alt={role.title}
-                    width={16}
-                    height={16}
-                    className="invert"
+                    width={20}
+                    height={20}
+                    className="brightness-[10] contrast-100"
                   />
                 </div>
                 <span>{role.title}</span>
                 {currentRole === role.id && (
-                  <svg className="w-5 h-5 ml-auto text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 ml-auto text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 )}

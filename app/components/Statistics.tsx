@@ -17,7 +17,7 @@ const statsData: StatItem[] = [
   { value: 2500, labelKey: 'stat_hours', suffix: '+' }
 ];
 
-function AnimatedCounter({ value }: { value: number }) {
+function AnimatedCounter({ value, suffix }: { value: number, suffix?: string }) {
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const counterRef = useRef<HTMLDivElement>(null);
@@ -62,7 +62,12 @@ function AnimatedCounter({ value }: { value: number }) {
 
   return (
     <div ref={counterRef} className="transform transition-all duration-500 hover:scale-105">
-      <span className="text-4xl md:text-5xl font-bold text-primary">{count}</span>
+      <div className="inline-flex items-baseline">
+        <span className="text-4xl md:text-5xl font-bold text-primary">{count}</span>
+        {suffix && (
+          <span className="text-4xl md:text-5xl font-bold text-primary">{suffix}</span>
+        )}
+      </div>
     </div>
   );
 }
@@ -78,10 +83,7 @@ export default function Statistics() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {statsData.map((stat) => (
             <div key={stat.labelKey} className="p-4 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <AnimatedCounter value={stat.value} />
-              {stat.suffix && (
-                <span className="text-4xl md:text-5xl font-bold text-primary">{stat.suffix}</span>
-              )}
+              <AnimatedCounter value={stat.value} suffix={stat.suffix} />
               <p className="mt-2 text-gray-600 font-medium">{t(stat.labelKey)}</p>
             </div>
           ))}
