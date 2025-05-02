@@ -39,10 +39,10 @@ export default function Navigation({ isHome = false }: NavigationProps) {
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white/90 backdrop-blur-md shadow-lg' : 'bg-transparent'
-    } ${isHome ? 'text-gray-700' : 'text-gray-800'}`}>
+    } ${isHome ? 'text-neutral-700' : 'text-neutral-800'}`}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-20">
-          <Link href={createLocalePath('/')} className="text-2xl font-bold">
+          <Link href={createLocalePath('/')} className="text-2xl font-bold text-primary-600">
             {t('appName')}
           </Link>
           
@@ -50,43 +50,43 @@ export default function Navigation({ isHome = false }: NavigationProps) {
           <div className="hidden md:flex space-x-8 items-center">
             <Link 
               href={createLocalePath('/how-it-works')} 
-              className={`nav-link ${isHome ? 'text-gray-700 hover:text-black' : ''}`}
+              className="nav-link"
             >
               {t('nav_how_it_works')}
             </Link>
             <Link 
               href={createLocalePath('/for-students')} 
-              className={`nav-link ${isHome ? 'text-gray-700 hover:text-black' : ''}`}
+              className="nav-link"
             >
               {t('nav_for_students')}
             </Link>
             <Link 
               href={createLocalePath('/for-seniors')} 
-              className={`nav-link ${isHome ? 'text-gray-700 hover:text-black' : ''}`}
+              className="nav-link"
             >
               {t('nav_for_seniors')}
             </Link>
             <Link 
               href={createLocalePath('/for-homes')} 
-              className={`nav-link ${isHome ? 'text-gray-700 hover:text-black' : ''}`}
+              className="nav-link"
             >
               {t('nav_for_homes')}
             </Link>
             <Link 
               href={createLocalePath('/for-municipalities')} 
-              className={`nav-link ${isHome ? 'text-gray-700 hover:text-black' : ''}`}
+              className="nav-link"
             >
               {t('nav_for_municipalities')}
             </Link>
             <Link 
               href={createLocalePath('/contact')} 
-              className={`nav-link ${isHome ? 'text-gray-700 hover:text-black' : ''}`}
+              className="nav-link"
             >
               {t('nav_contact')}
             </Link>
             <button
               onClick={handleChangeRole}
-              className="text-primary hover:text-primary-dark flex items-center space-x-1"
+              className="text-secondary-600 hover:text-secondary-700 flex items-center space-x-1"
             >
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
@@ -107,7 +107,7 @@ export default function Navigation({ isHome = false }: NavigationProps) {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-gray-600 hover:text-primary transition-colors"
+            className="md:hidden text-neutral-600 hover:text-primary-500 transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >

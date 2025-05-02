@@ -20,21 +20,21 @@ export default function RoleButton() {
       id: 'student',
       title: t('role_student_title'),
       icon: '/icons/student.svg',
-      color: 'bg-indigo-600',
+      color: 'bg-accent-600',
       textColor: 'text-white'
     },
     {
       id: 'senior',
       title: t('role_senior_title'),
       icon: '/icons/senior.svg',
-      color: 'bg-emerald-600',
+      color: 'bg-primary-500',
       textColor: 'text-white'
     },
     {
       id: 'homeowner',
       title: t('role_homeowner_title'),
       icon: '/icons/home.svg',
-      color: 'bg-purple-700',
+      color: 'bg-secondary-500',
       textColor: 'text-white'
     }
   ];
@@ -45,7 +45,7 @@ export default function RoleButton() {
       id: 'none', 
       title: t('select_your_role'), 
       icon: '/icons/register.svg',
-      color: 'bg-gray-600',
+      color: 'bg-neutral-600',
       textColor: 'text-white'
     };
   };
@@ -78,7 +78,7 @@ export default function RoleButton() {
     <div className="relative z-20">
       {/* Current role button */}
       <button 
-        className="flex items-center space-x-2 bg-white/90 backdrop-blur-sm rounded-full px-5 py-3 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200"
+        className="flex items-center space-x-2 bg-white/90 backdrop-blur-sm rounded-full px-5 py-3 shadow-lg hover:shadow-xl transition-all duration-300 border border-neutral-200"
         onClick={() => setIsOpen(!isOpen)}
       >
         <div className={`w-8 h-8 rounded-full ${currentRoleInfo.color} flex items-center justify-center ${currentRoleInfo.textColor}`}>
@@ -90,9 +90,9 @@ export default function RoleButton() {
             className="brightness-[10] contrast-100"
           />
         </div>
-        <span className="font-medium">{currentRoleInfo.title}</span>
+        <span className="font-medium text-neutral-800">{currentRoleInfo.title}</span>
         <svg 
-          className={`w-4 h-4 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+          className={`w-4 h-4 transition-transform duration-300 text-neutral-500 ${isOpen ? 'rotate-180' : ''}`}
           fill="none" 
           stroke="currentColor" 
           viewBox="0 0 24 24"
@@ -103,13 +103,13 @@ export default function RoleButton() {
 
       {/* Role selection dropdown */}
       {isOpen && (
-        <div className="absolute right-0 mt-2 bg-white rounded-lg shadow-xl border border-gray-100 overflow-hidden min-w-56">
+        <div className="absolute right-0 mt-2 bg-white rounded-lg shadow-xl border border-neutral-200 overflow-hidden min-w-56">
           <div className="py-2">
             {roles.map(role => (
               <button
                 key={role.id}
                 onClick={() => handleSelectRole(role.id)}
-                className="w-full px-4 py-3 text-left flex items-center space-x-3 hover:bg-gray-50 transition-colors"
+                className="w-full px-4 py-3 text-left flex items-center space-x-3 hover:bg-neutral-50 transition-colors"
               >
                 <div className={`w-8 h-8 rounded-full ${role.color} flex items-center justify-center ${role.textColor}`}>
                   <Image 
@@ -120,9 +120,9 @@ export default function RoleButton() {
                     className="brightness-[10] contrast-100"
                   />
                 </div>
-                <span>{role.title}</span>
+                <span className="text-neutral-800">{role.title}</span>
                 {currentRole === role.id && (
-                  <svg className="w-5 h-5 ml-auto text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 ml-auto text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 )}

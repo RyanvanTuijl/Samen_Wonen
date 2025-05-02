@@ -5,61 +5,68 @@
 @import 'leaflet/dist/leaflet.css';
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-rgb: 255, 255, 255;
+  --foreground-rgb: 15, 41, 59;
+  --background-rgb: 249, 250, 251;
 }
 
 @layer base {
   body {
-    @apply text-gray-800 bg-gray-50;
+    @apply text-neutral-800 bg-background;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold;
+    @apply font-bold text-neutral-900;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-gradient-to-r from-primary to-primary/80 text-white px-8 py-4 rounded-full font-semibold 
-           hover:from-primary/90 hover:to-primary/70 transition-all duration-500 transform hover:scale-105 
-           shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2
+    @apply bg-gradient-to-r from-primary-500 to-primary-600 text-white px-8 py-4 rounded-full font-semibold 
+           hover:from-primary-600 hover:to-primary-700 transition-all duration-500 transform hover:scale-105 
+           shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2
            hover:-translate-y-1;
   }
   
   .btn-secondary {
-    @apply bg-gradient-to-r from-secondary to-secondary/80 text-white px-8 py-4 rounded-full font-semibold 
-           hover:from-secondary/90 hover:to-secondary/70 transition-all duration-500 transform hover:scale-105 
-           shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2
+    @apply bg-gradient-to-r from-secondary-500 to-secondary-600 text-white px-8 py-4 rounded-full font-semibold 
+           hover:from-secondary-600 hover:to-secondary-700 transition-all duration-500 transform hover:scale-105 
+           shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:ring-offset-2
+           hover:-translate-y-1;
+  }
+  
+  .btn-accent {
+    @apply bg-gradient-to-r from-accent-500 to-accent-600 text-white px-8 py-4 rounded-full font-semibold 
+           hover:from-accent-600 hover:to-accent-700 transition-all duration-500 transform hover:scale-105 
+           shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2
            hover:-translate-y-1;
   }
 
   .card {
     @apply bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 
-           transform hover:-translate-y-2 p-8 backdrop-blur-sm bg-white/90 border border-gray-100
-           hover:border-primary/20;
+           transform hover:-translate-y-2 p-8 backdrop-blur-sm bg-white/90 border border-neutral-200
+           hover:border-primary-200;
   }
 
   .section-title {
-    @apply text-4xl md:text-5xl font-bold mb-8 text-gray-800 relative inline-block
+    @apply text-4xl md:text-5xl font-bold mb-8 text-neutral-900 relative inline-block
            animate-fade-in-up;
   }
 
   .section-title::after {
-    @apply content-[''] absolute bottom-0 left-0 w-1/3 h-1.5 bg-gradient-to-r from-primary to-secondary 
+    @apply content-[''] absolute bottom-0 left-0 w-1/3 h-1.5 bg-gradient-to-r from-primary-500 to-secondary-500 
            rounded-full transform origin-left transition-all duration-500 group-hover:w-full;
   }
 
   .section-subtitle {
-    @apply text-2xl md:text-3xl font-semibold mb-6 text-gray-700 animate-fade-in-up;
+    @apply text-2xl md:text-3xl font-semibold mb-6 text-neutral-700 animate-fade-in-up;
   }
 
   .nav-link {
-    @apply text-gray-600 hover:text-primary transition-all duration-300 relative font-medium
+    @apply text-neutral-700 hover:text-primary-600 transition-all duration-300 relative font-medium
            hover:-translate-y-0.5;
   }
 
   .nav-link::after {
-    @apply content-[''] absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-primary to-secondary 
+    @apply content-[''] absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 
            transition-all duration-300 rounded-full;
   }
 
@@ -68,7 +75,7 @@
   }
 
   .hero-gradient {
-    @apply bg-gradient-to-r from-primary via-primary/90 to-secondary relative overflow-hidden
+    @apply bg-gradient-to-r from-primary-600 via-primary-500 to-secondary-500 relative overflow-hidden
            animate-gradient;
   }
 
@@ -77,17 +84,17 @@
   }
 
   .testimonial-card {
-    @apply card relative overflow-hidden border-l-4 border-primary
-           hover:shadow-primary/10 transition-all duration-500;
+    @apply card relative overflow-hidden border-l-4 border-primary-500
+           hover:shadow-primary-100/30 transition-all duration-500;
   }
 
   .testimonial-card::before {
-    @apply content-[''] absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary
+    @apply content-[''] absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary-500 to-secondary-500
            transform scale-x-0 transition-transform duration-500 group-hover:scale-x-100;
   }
 
   .number-circle {
-    @apply w-16 h-16 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center 
+    @apply w-16 h-16 rounded-full bg-gradient-to-r from-primary-500 to-secondary-500 flex items-center 
            justify-center text-white text-2xl font-bold shadow-lg
            transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-12;
   }
@@ -136,4 +143,4 @@
       transform: translateY(0);
     }
   }
-} 
+}

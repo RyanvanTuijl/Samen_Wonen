@@ -19,21 +19,21 @@ export default function RoleSelection() {
       title: t('role_student_title'),
       description: t('role_student_desc'),
       icon: '/icons/student.svg',
-      color: 'from-blue-500 to-blue-700'
+      color: 'from-accent-500 to-accent-600'
     },
     {
       id: 'senior',
       title: t('role_senior_title'),
       description: t('role_senior_desc'),
       icon: '/icons/senior.svg',
-      color: 'from-green-500 to-green-700'
+      color: 'from-primary-500 to-primary-600'
     },
     {
       id: 'homeowner',
       title: t('role_homeowner_title'),
       description: t('role_homeowner_desc'),
       icon: '/icons/home.svg',
-      color: 'from-purple-500 to-purple-700'
+      color: 'from-secondary-500 to-secondary-600'
     }
   ];
 
@@ -58,13 +58,13 @@ export default function RoleSelection() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-20 px-4">
+    <div className="min-h-screen bg-neutral-50 py-20 px-4">
       <div className="container mx-auto">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800 animate-fade-in">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-neutral-900 animate-fade-in">
             {t('role_selection_title')}
           </h1>
-          <p className="text-xl text-gray-600 animate-fade-in-up">
+          <p className="text-xl text-neutral-600 animate-fade-in-up">
             {t('role_selection_subtitle')}
           </p>
         </div>
@@ -80,15 +80,18 @@ export default function RoleSelection() {
               <div className={`h-3 bg-gradient-to-r ${role.color}`}></div>
               <div className="p-8">
                 <div className="w-24 h-24 mx-auto mb-6 relative">
-                  <Image 
-                    src={role.icon} 
-                    alt={role.title}
-                    fill
-                    className="object-contain"
-                  />
+                  <div className={`absolute inset-0 rounded-full bg-gradient-to-r ${role.color} flex items-center justify-center`}>
+                    <Image 
+                      src={role.icon} 
+                      alt={role.title}
+                      width={40}
+                      height={40}
+                      className="text-white invert brightness-[10]"
+                    />
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-gray-800">{role.title}</h3>
-                <p className="text-gray-600 mb-6">{role.description}</p>
+                <h3 className="text-2xl font-bold mb-4 text-neutral-800">{role.title}</h3>
+                <p className="text-neutral-600 mb-6">{role.description}</p>
                 <button 
                   className={`w-full py-3 px-6 rounded-lg bg-gradient-to-r ${role.color} 
                              text-white font-medium transform transition hover:scale-105`}
