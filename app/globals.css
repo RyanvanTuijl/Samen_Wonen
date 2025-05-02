@@ -11,10 +11,10 @@
 
 @layer base {
   body {
-    @apply text-gray-800 bg-gray-50 dark:text-gray-100 dark:bg-gray-900;
+    @apply text-gray-800 bg-gray-50;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold dark:text-white;
+    @apply font-bold;
   }
 }
 
@@ -23,25 +23,24 @@
     @apply bg-gradient-to-r from-primary to-primary/80 text-white px-8 py-4 rounded-full font-semibold 
            hover:from-primary/90 hover:to-primary/70 transition-all duration-500 transform hover:scale-105 
            shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2
-           hover:-translate-y-1 dark:focus:ring-offset-gray-900;
+           hover:-translate-y-1;
   }
   
   .btn-secondary {
     @apply bg-gradient-to-r from-secondary to-secondary/80 text-white px-8 py-4 rounded-full font-semibold 
            hover:from-secondary/90 hover:to-secondary/70 transition-all duration-500 transform hover:scale-105 
            shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2
-           hover:-translate-y-1 dark:focus:ring-offset-gray-900;
+           hover:-translate-y-1;
   }
 
   .card {
     @apply bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 
            transform hover:-translate-y-2 p-8 backdrop-blur-sm bg-white/90 border border-gray-100
-           hover:border-primary/20
-           dark:bg-gray-800 dark:border-gray-700 dark:hover:border-primary/20;
+           hover:border-primary/20;
   }
 
   .section-title {
-    @apply text-4xl md:text-5xl font-bold mb-8 text-gray-800 dark:text-white relative inline-block
+    @apply text-4xl md:text-5xl font-bold mb-8 text-gray-800 relative inline-block
            animate-fade-in-up;
   }
 
@@ -51,11 +50,11 @@
   }
 
   .section-subtitle {
-    @apply text-2xl md:text-3xl font-semibold mb-6 text-gray-700 dark:text-gray-300 animate-fade-in-up;
+    @apply text-2xl md:text-3xl font-semibold mb-6 text-gray-700 animate-fade-in-up;
   }
 
   .nav-link {
-    @apply text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-all duration-300 relative font-medium
+    @apply text-gray-600 hover:text-primary transition-all duration-300 relative font-medium
            hover:-translate-y-0.5;
   }
 
@@ -137,4 +136,4 @@
       transform: translateY(0);
     }
   }
-}
+} 
