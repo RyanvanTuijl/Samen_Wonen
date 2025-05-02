@@ -2,7 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
+import Cookies from 'js-cookie';
 import LanguageSwitcher from './LanguageSwitcher';
 import { useTranslation } from '../i18n/client';
 
@@ -12,6 +13,7 @@ interface NavigationProps {
 
 export default function Navigation({ isHome = false }: NavigationProps) {
   const pathname = usePathname();
+  const router = useRouter();
   const locale = pathname.split('/')[1] || 'nl';
   const { t } = useTranslation(locale, 'common');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,6 +29,12 @@ export default function Navigation({ isHome = false }: NavigationProps) {
   }, []);
 
   const createLocalePath = (path: string) => `/${locale}${path === '/' ? '' : path}`;
+  
+  const handleChangeRole = () => {
+    // Clear the userRole cookie and reload the homepage to show role selection
+    Cookies.remove('userRole');
+    router.push(createLocalePath('/'));
+  };
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${
@@ -53,6 +61,12 @@ export default function Navigation({ isHome = false }: NavigationProps) {
               {t('nav_for_students')}
             </Link>
             <Link 
+              href={createLocalePath('/for-seniors')} 
+              className={`nav-link ${isHome ? 'text-gray-700 hover:text-black' : ''}`}
+            >
+              {t('nav_for_seniors')}
+            </Link>
+            <Link 
               href={createLocalePath('/for-homes')} 
               className={`nav-link ${isHome ? 'text-gray-700 hover:text-black' : ''}`}
             >
@@ -70,6 +84,24 @@ export default function Navigation({ isHome = false }: NavigationProps) {
             >
               {t('nav_contact')}
             </Link>
+            <button
+              onClick={handleChangeRole}
+              className="text-primary hover:text-primary-dark flex items-center space-x-1"
+            >
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                className="h-5 w-5" 
+                viewBox="0 0 20 20" 
+                fill="currentColor"
+              >
+                <path 
+                  fillRule="evenodd" 
+                  d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" 
+                  clipRule="evenodd" 
+                />
+              </svg>
+              <span>{t('change_role')}</span>
+            </button>
             <LanguageSwitcher />
           </div>
 
@@ -107,7 +139,7 @@ export default function Navigation({ isHome = false }: NavigationProps) {
         {/* Mobile Navigation */}
         <div
           className={`md:hidden transition-all duration-300 ease-in-out ${
-            isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+            isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
           } overflow-hidden`}
         >
           <div className="py-4 space-y-4">
@@ -124,6 +156,13 @@ export default function Navigation({ isHome = false }: NavigationProps) {
               onClick={() => setIsMenuOpen(false)}
             >
               {t('nav_for_students')}
+            </Link>
+            <Link
+              href={createLocalePath('/for-seniors')}
+              className="block nav-link"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {t('nav_for_seniors')}
             </Link>
             <Link
               href={createLocalePath('/for-homes')}
@@ -146,6 +185,24 @@ export default function Navigation({ isHome = false }: NavigationProps) {
             >
               {t('nav_contact')}
             </Link>
+            <button
+              onClick={handleChangeRole}
+              className="flex items-center space-x-1 w-full text-left nav-link"
+            >
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                className="h-5 w-5" 
+                viewBox="0 0 20 20" 
+                fill="currentColor"
+              >
+                <path 
+                  fillRule="evenodd" 
+                  d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" 
+                  clipRule="evenodd" 
+                />
+              </svg>
+              <span>{t('change_role')}</span>
+            </button>
             <div className="py-2">
               <LanguageSwitcher />
             </div>
@@ -154,4 +211,4 @@ export default function Navigation({ isHome = false }: NavigationProps) {
       </div>
     </nav>
   );
-} 
+}

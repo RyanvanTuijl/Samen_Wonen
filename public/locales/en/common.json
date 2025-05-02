@@ -2,6 +2,7 @@
   "appName": "SamenWonen",
   "nav_how_it_works": "How it works",
   "nav_for_students": "For students",
+  "nav_for_seniors": "For seniors",
   "nav_for_homes": "For care homes",
   "nav_for_municipalities": "For municipalities",
   "nav_contact": "Contact",
@@ -10,6 +11,18 @@
   "hero_subtitle": "Students and seniors together under one roof. A unique opportunity for intergenerational connection and affordable housing.",
   "hero_cta1": "Discover how it works",
   "hero_cta2": "Get in touch",
+
+  // Role selection translations
+  "role_selection_title": "Welcome to SamenWonen",
+  "role_selection_subtitle": "Please select your role to get information tailored to you",
+  "role_student_title": "I am a Student",
+  "role_student_desc": "Looking for affordable housing and unique living experience",
+  "role_senior_title": "I am a Senior",
+  "role_senior_desc": "Interested in sharing my home and connecting with younger generations",
+  "role_homeowner_title": "I am a Homeowner",
+  "role_homeowner_desc": "Want to offer housing for the intergenerational living program",
+  "role_select_button": "Select Role",
+  "change_role": "Change Role",
 
   "how_it_works_title": "How does it work?",
   "how_it_works_step1_title": "Sign Up",
@@ -46,4 +59,4 @@
   "map_available_rooms": "Available Rooms",
   "map_rooms": "rooms",
   "map_amenities": "Amenities"
-} 
+}

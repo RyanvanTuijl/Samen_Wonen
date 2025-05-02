@@ -2,6 +2,7 @@
   "appName": "SamenWonen",
   "nav_how_it_works": "Hoe het werkt",
   "nav_for_students": "Voor studenten",
+  "nav_for_seniors": "Voor ouderen",
   "nav_for_homes": "Voor verzorgingstehuizen",
   "nav_for_municipalities": "Voor gemeenten",
   "nav_contact": "Contact",
@@ -45,5 +46,17 @@
   "map_loading_message": "We zijn momenteel actief in verschillende steden in Nederland. Bekijk waar je ons kunt vinden!",
   "map_available_rooms": "Beschikbare Kamers",
   "map_rooms": "kamers",
-  "map_amenities": "Voorzieningen"
-} 
+  "map_amenities": "Voorzieningen",
+
+  // Role selection translations
+  "role_selection_title": "Welkom bij SamenWonen",
+  "role_selection_subtitle": "Selecteer uw rol voor op maat gemaakte informatie",
+  "role_student_title": "Ik ben een Student",
+  "role_student_desc": "Op zoek naar betaalbare woonruimte en een unieke woonervaring",
+  "role_senior_title": "Ik ben een Oudere",
+  "role_senior_desc": "Geïnteresseerd in het delen van mijn huis en verbinden met jongere generaties",
+  "role_homeowner_title": "Ik ben een Huiseigenaar",
+  "role_homeowner_desc": "Wil woonruimte aanbieden voor het intergenerationeel woonprogramma",
+  "role_select_button": "Selecteer Rol",
+  "change_role": "Wijzig Rol"
+}

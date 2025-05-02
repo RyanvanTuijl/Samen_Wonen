@@ -1,16 +1,44 @@
-import React from 'react';
+'use client';
+
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { useParams } from 'next/navigation';
+import Cookies from 'js-cookie';
 import Navigation from '../components/Navigation';
 import ScrollToTop from '../components/ScrollToTop';
 import Statistics from '../components/Statistics';
 import FAQ from '../components/FAQ';
 import Blog from '../components/Blog';
 import InteractiveMap from '../components/Map';
+import RoleSelection from '../components/RoleSelection';
 import Image from 'next/image';
-import { useTranslation } from '../i18n';
+import { useTranslation as useClientTranslation } from '../i18n/client';
 
-export default async function Home({ params: { locale } }: { params: { locale: string } }) {
-  const { t } = await useTranslation(locale, 'common');
+export default function Home() {
+  const params = useParams();
+  const locale = params.locale as string;
+  const { t } = useClientTranslation(locale, 'common');
+  const [showRoleSelection, setShowRoleSelection] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
+  
+  useEffect(() => {
+    // Check if user has already selected a role
+    const userRole = Cookies.get('userRole');
+    setShowRoleSelection(!userRole);
+    setIsLoading(false);
+  }, []);
+  
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-primary"></div>
+      </div>
+    );
+  }
+  
+  if (showRoleSelection) {
+    return <RoleSelection />;
+  }
 
   return (
     <>
@@ -158,4 +186,4 @@ export default async function Home({ params: { locale } }: { params: { locale: s
       </main>
     </>
   );
-} 
+}
