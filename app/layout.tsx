@@ -21,8 +21,8 @@ export default function RootLayout({
 }) {
   return (
     // Use params.locale for the lang attribute
-    <html lang={params.locale}>
-      <body className={`${inter.className} min-h-screen bg-gray-50`}>
+    <html lang={params.locale} suppressHydrationWarning>
+      <body className={`${inter.className} min-h-screen bg-gray-50 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300`}>
         <ClientProviders>
           <Navigation isHome={false} /> 
           {children}
@@ -30,4 +30,4 @@ export default function RootLayout({
       </body>
     </html>
   )
-} 
+}
