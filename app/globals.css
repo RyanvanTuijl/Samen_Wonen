@@ -19,6 +19,11 @@
 }
 
 @layer components {
+  /* Updated CSS - May 18, 2025 */
+  .debug-banner {
+    @apply fixed top-0 left-0 w-full bg-red-600 text-white text-center p-4 z-50 font-bold text-lg;
+  }
+  
   .btn-primary {
     @apply bg-gradient-to-r from-primary-500 to-primary-600 text-white px-8 py-4 rounded-full font-semibold 
            hover:from-primary-600 hover:to-primary-700 transition-all duration-500 transform hover:scale-105 

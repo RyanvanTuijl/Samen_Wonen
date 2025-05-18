@@ -1,32 +1,66 @@
 {
   "page_title": "Hoe SamenWonen Werkt",
-  "page_subtitle": "Ontdek de eenvoudige stappen om deel te nemen aan onze intergenerationele woongemeenschap, die studenten en senioren verbindt.",
+  "page_subtitle": "Ontdek de uitgebreide reis om deel te nemen aan onze intergenerationele woongemeenschap, die studenten en senioren verbindt door een doordacht, ondersteunend proces.",
   "step_label": "Stap {{count}}",
 
-  "step1_title": "Registratie en Profiel",
-  "step1_desc": "Begin met het aanmaken van je persoonlijke profiel.",
-  "step1_details": "Zowel studenten die huisvesting zoeken als verzorgingshuizen die ruimte bieden, registreren zich op ons beveiligde platform. Vul je gegevens, voorkeuren en verwachtingen van het samenwonen in. Dit helpt ons jouw behoeften te begrijpen.",
+  "step1_title": "Registratie en Profielaanmaak",
+  "step1_desc": "Begin je reis door een gedetailleerd persoonlijk profiel aan te maken.",
+  "step1_details": "Zowel studenten die betaalbare huisvesting zoeken als verzorgingshuizen/senioren die ruimte aanbieden, registreren zich op ons beveiligde platform. Vul je uitgebreide profiel in met persoonlijke gegevens, woonvoorkeuren, interesses en verwachtingen voor intergenerationeel wonen. Upload foto's en video's om je persoonlijkheid en woonruimte te laten zien. Een grondig profiel vergroot je kansen op het vinden van de perfecte match.",
 
-  "step2_title": "Zorgvuldig Matchingsproces",
-  "step2_desc": "We vinden de best mogelijke match op basis van compatibiliteit.",
-  "step2_details": "Ons team gebruikt een combinatie van profielinformatie, persoonlijke gesprekken (indien nodig) en algoritmen om geschikte matches te vinden. We focussen op gedeelde interesses, verenigbaarheid van levensstijl en wederzijdse verwachtingen om een harmonieuze woonomgeving te garanderen.",
+  "step2_title": "Verificatie en Screening",
+  "step2_desc": "We zorgen voor veiligheid en compatibiliteit via ons verificatieproces.",
+  "step2_details": "Na registratie beoordeelt ons team alle profielen op authenticiteit en volledigheid. Studenten ondergaan achtergrondcontroles, terwijl deelnemende verzorgingshuizen en senioren worden geverifieerd op huisvestingsnormen. Deze stap kan referentiecontroles, identiteitsverificatie en woninginspectie omvatten waar van toepassing. Dit grondige screeningsproces zorgt voor veiligheid en gemoedsrust voor alle betrokken partijen.",
 
-  "step3_title": "Kennismaking en Verhuizing",
-  "step3_desc": "Ontmoet je potentiële match en begin je reis.",
-  "step3_details": "Zodra een potentiële match is gevonden, faciliteren we een kennismakingsgesprek. Als beide partijen akkoord gaan, ronden we de regelingen af, ondertekenen de nodige overeenkomsten en helpen we bij het coördineren van de verhuizing. Ons team biedt doorlopende ondersteuning voor een soepele overgang.",
+  "step3_title": "Zorgvuldig Matchingsproces",
+  "step3_desc": "Ons gespecialiseerde algoritme identificeert jouw ideale woonarrangement.",
+  "step3_details": "Met behulp van ons geavanceerde matchingsysteem analyseren we meer dan 20 compatibiliteitsfactoren, waaronder persoonlijkheidskenmerken, levensstijlgewoonten, gedeelde interesses en wederzijdse verwachtingen. Ons team beoordeelt persoonlijk potentiële matches om optimale koppels te waarborgen. We houden rekening met geografische voorkeuren, toegankelijkheidseisen en specifieke behoeften van zowel studenten als senioren. Deze nauwkeurige aanpak leidt tot harmonieuze en wederzijds voordelige woonarrangementen.",
+
+  "step4_title": "Kennismaking en Proefperiode",
+  "step4_desc": "Ontmoet je potentiële match en ervaar tijdelijk samenwonen.",
+  "step4_details": "Zodra een potentiële match is geïdentificeerd, organiseren we een eerste ontmoeting in een comfortabele omgeving. Als beide partijen geïnteresseerd zijn, faciliteren we een korte proefperiode van 1-2 weken waarin de student verblijft in de woning van de senior. Dit geeft beide partijen praktijkervaring met de regeling voordat ze een langetermijnverbintenis aangaan. Ons team biedt begeleiding en ondersteuning tijdens deze cruciale fase, en helpt bij het vaststellen van duidelijke verwachtingen en huisregels.",
+
+  "step5_title": "Overeenkomst en Verhuizing",
+  "step5_desc": "Formaliseer je regeling en begin je intergenerationele woonervaring.",
+  "step5_details": "Na een succesvolle proefperiode ondertekenen beide partijen onze uitgebreide SamenWonen-overeenkomst die accommodatievoorwaarden, verantwoordelijkheden, financiële regelingen en procedures voor conflictoplossing omvat. We bieden ondersteuning tijdens het verhuisproces, inclusief praktische begeleiding en middelen voor een soepele overgang. Eenmaal gevestigd, houdt ons team regelmatige controles gedurende de eerste drie maanden om eventuele problemen aan te pakken en een harmonieuze woonomgeving te garanderen.",
+
+  "ongoing_support_title": "Doorlopende Ondersteuning",
+  "ongoing_support_desc": "We staan je bij gedurende je hele intergenerationele woonreis.",
+  "ongoing_support_details": "SamenWonen biedt continue hulp via ons toegewijde ondersteuningsteam, beschikbaar via telefoon, e-mail en persoonlijke gesprekken. We organiseren regelmatige gemeenschapsevenementen, workshops en bieden middelen om je gedeelde woonervaring te verbeteren. Driemaandelijkse check-ins helpen ons om opkomende zorgen aan te pakken, en onze bemiddelingsdiensten zijn beschikbaar mocht er een conflict ontstaan. Onze toewijding is om een duurzame, verrijkende woonregeling te garanderen voor zowel studenten als senioren.",
 
   "benefits_title": "Wederzijdse Voordelen",
   "benefits_students_title": "Voor Studenten",
-  "benefits_students_item1": "Betaalbare en veilige huisvesting.",
-  "benefits_students_item2": "Betekenisvolle sociale interactie.",
-  "benefits_students_item3": "Persoonlijke groei en levenservaring.",
+  "benefits_students_item1": "Betaalbare en veilige huisvesting op gewenste locaties.",
+  "benefits_students_item2": "Betekenisvolle sociale interactie en intergenerationeel leren.",
+  "benefits_students_item3": "Persoonlijke groei, levenservaring en ontwikkeling van praktische vaardigheden.",
+  "benefits_students_item4": "Verlaagde woonkosten en mogelijkheid tot huurverlaging door hulp te bieden.",
+  "benefits_students_item5": "Verbeterde academische prestaties door stabiele woonsituatie.",
+  
   "benefits_seniors_title": "Voor Senioren & Verzorgingshuizen",
-  "benefits_seniors_item1": "Verhoogde vitaliteit en gezelschap.",
-  "benefits_seniors_item2": "Hulp bij dagelijkse taken en technologie.",
-  "benefits_seniors_item3": "Versterkt gemeenschapsgevoel.",
+  "benefits_seniors_item1": "Verhoogde vitaliteit, gezelschap en verminderde eenzaamheid.",
+  "benefits_seniors_item2": "Praktische hulp bij dagelijkse taken, technologie en huishoudelijk onderhoud.",
+  "benefits_seniors_item3": "Versterkt gemeenschapsgevoel en intergenerationele verbindingen.",
+  "benefits_seniors_item4": "Extra inkomen of hulp om woonkosten te compenseren.",
+  "benefits_seniors_item5": "Verhoogd gevoel van zingeving en bijdrage aan jongere generaties.",
+  "testimonials_title": "Succesverhaal",
+  "testimonial1_name": "Lisa & Mevrouw Jansen",
+  "testimonial1_student": "Het vinden van huisvesting was zo moeilijk totdat ik SamenWonen ontdekte. Nu heb ik een betaalbare woonplek en een geweldige relatie met mevrouw Jansen die verder gaat dan alleen het delen van een huis.",
+  "testimonial1_senior": "Lisa's aanwezigheid heeft zoveel vreugde in mijn leven gebracht. Ze helpt me met mijn computer en neemt me mee winkelen, terwijl ik traditionele maaltijden kook waar zij van houdt. Het is de perfecte regeling.",
+
+  "faq_title": "Veelgestelde Vragen",
+  "faq1_question": "Hoe lang duurt het matchingsproces doorgaans?",
+  "faq1_answer": "Het matchingsproces duurt meestal 2-4 weken, afhankelijk van de volledigheid van het profiel en specifieke vereisten. Onze grondige aanpak zorgt voor kwaliteitsmatches in plaats van snelle plaatsingen.",
+  
+  "faq2_question": "Wat gebeurt er als de woonregeling niet werkt?",
+  "faq2_answer": "Onze overeenkomsten bevatten een opzegtermijn (meestal 30 dagen) voor beide partijen. Als er problemen ontstaan, biedt ons ondersteuningsteam bemiddeling voordat er beslissingen worden genomen. We kunnen ook helpen bij het vinden van een nieuwe match indien nodig.",
+  
+  "faq3_question": "Welke ondersteuning bied je na het verhuizen?",
+  "faq3_answer": "We bieden doorlopende ondersteuning via regelmatige check-ins, een speciale ondersteuningslijn, gemeenschapsevenementen en conflictoplossingsservices indien nodig. Ons team blijft beschikbaar gedurende je hele ervaring met SamenWonen.",
+
+  "commitment_title": "Onze Toewijding",
+  "commitment_desc": "SamenWonen is meer dan alleen een huisvestingsoplossing—het is een zorgvuldig ontworpen gemeenschapsprogramma dat prioriteit geeft aan kwaliteitsmatches, veiligheid en wederzijds voordeel. We blijven betrokken tijdens het hele proces om ervoor te zorgen dat zowel studenten als senioren een positieve, verrijkende ervaring hebben.",
 
   "cta_title": "Klaar voor de Volgende Stap?",
-  "cta_subtitle": "Heb je nog vragen? Bekijk onze FAQ of neem direct contact op met ons team.",
+  "cta_subtitle": "Heb je nog vragen? Bekijk onze FAQ of neem direct contact op met ons team voor persoonlijke begeleiding.",
   "cta_button_contact": "Neem Contact Op",
   "cta_button_faq": "Bekijk FAQ"
 } 

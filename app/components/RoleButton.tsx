@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import Cookies from 'js-cookie';
 import { useTranslation } from '../i18n/client';
@@ -12,6 +12,8 @@ export default function RoleButton() {
   const { t } = useTranslation(locale, 'common');
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
+  const buttonRef = useRef<HTMLDivElement>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const currentRole = Cookies.get('userRole') || 'none';
   
@@ -49,7 +51,6 @@ export default function RoleButton() {
       textColor: 'text-white'
     };
   };
-
   const handleSelectRole = (roleId: string) => {
     // Store user role preference in a cookie that lasts 30 days
     Cookies.set('userRole', roleId, { expires: 30 });
@@ -71,11 +72,41 @@ export default function RoleButton() {
     
     setIsOpen(false);
   };
+  
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (buttonRef.current && !buttonRef.current.contains(event.target as Node) &&
+          dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    }
+    
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+  // Adjust dropdown position if near the bottom of viewport
+  const [dropdownPosition, setDropdownPosition] = useState<'bottom' | 'top'>('bottom');
+  
+  useEffect(() => {
+    if (buttonRef.current && isOpen) {
+      const buttonRect = buttonRef.current.getBoundingClientRect();
+      const viewportHeight = window.innerHeight;
+      const spaceBelow = viewportHeight - buttonRect.bottom;
+      
+      // If less than 200px below, position dropdown above
+      if (spaceBelow < 200) {
+        setDropdownPosition('top');
+      } else {
+        setDropdownPosition('bottom');
+      }
+    }
+  }, [isOpen]);
 
   const currentRoleInfo = getCurrentRoleInfo();
-
+  
   return (
-    <div className="relative z-20">
+    <div className="relative" ref={buttonRef} style={{ zIndex: 9999 }}>
       {/* Current role button */}
       <button 
         className="flex items-center space-x-2 bg-white/90 backdrop-blur-sm rounded-full px-5 py-3 shadow-lg hover:shadow-xl transition-all duration-300 border border-neutral-200"
@@ -99,11 +130,17 @@ export default function RoleButton() {
         >
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
-      </button>
-
-      {/* Role selection dropdown */}
+      </button>      {/* Role selection dropdown */}
       {isOpen && (
-        <div className="absolute right-0 mt-2 bg-white rounded-lg shadow-xl border border-neutral-200 overflow-hidden min-w-56">
+        <div 
+          ref={dropdownRef}
+          className={`absolute ${dropdownPosition === 'bottom' ? 'top-full' : 'bottom-full'} left-0 ${dropdownPosition === 'bottom' ? 'mt-2' : 'mb-2'} bg-white rounded-lg shadow-xl border border-neutral-200 min-w-56`}
+          style={{ 
+            zIndex: 9999,
+            maxHeight: '300px',
+            overflow: 'visible'
+          }}
+        >
           <div className="py-2">
             {roles.map(role => (
               <button

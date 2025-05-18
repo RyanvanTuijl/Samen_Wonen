@@ -1,32 +1,66 @@
 {
   "page_title": "How SamenWonen Works",
-  "page_subtitle": "Discover the simple steps to join our intergenerational living community, connecting students and seniors.",
+  "page_subtitle": "Discover the comprehensive journey to join our intergenerational living community, connecting students and seniors through a thoughtful, supportive process.",
   "step_label": "Step {{count}}",
 
-  "step1_title": "Registration and Profile",
-  "step1_desc": "Start by creating your personal profile.",
-  "step1_details": "Both students looking for housing and care homes offering space register on our secure platform. Fill in your details, preferences, and what you expect from living together. This helps us understand your needs.",
+  "step1_title": "Registration and Profile Creation",
+  "step1_desc": "Begin your journey by creating a detailed personal profile.",
+  "step1_details": "Both students seeking affordable housing and care homes/seniors offering space register on our secure platform. Complete your comprehensive profile by providing personal details, living preferences, interests, and expectations for intergenerational living. Upload photos and videos to showcase your personality and living space. A thorough profile increases your chances of finding the perfect match.",
 
-  "step2_title": "Careful Matching Process",
-  "step2_desc": "We find the best possible match based on compatibility.",
-  "step2_details": "Our team uses a combination of profile information, personal interviews (if necessary), and algorithms to find suitable matches. We focus on shared interests, lifestyle compatibility, and mutual expectations to ensure a harmonious living arrangement.",
+  "step2_title": "Verification and Screening",
+  "step2_desc": "We ensure safety and compatibility through our verification process.",
+  "step2_details": "After registration, our team reviews all profiles for authenticity and completeness. Students undergo background checks while participating care homes and seniors are verified for accommodation standards. This step may include reference checks, identity verification, and accommodation inspection where applicable. This thorough screening process ensures security and peace of mind for all parties involved.",
 
-  "step3_title": "Introduction and Moving In",
-  "step3_desc": "Meet your potential match and start your journey.",
-  "step3_details": "Once a potential match is found, we facilitate an introduction meeting. If both parties agree, we finalize the arrangements, sign the necessary agreements, and help coordinate the move-in process. Our team provides ongoing support to ensure a smooth transition.",
+  "step3_title": "Careful Matching Process",
+  "step3_desc": "Our specialized algorithm identifies your ideal living arrangement.",
+  "step3_details": "Using our sophisticated matching system, we analyze over 20 compatibility factors including personality traits, lifestyle habits, shared interests, and mutual expectations. Our team personally reviews potential matches to ensure optimal pairing. We consider geographical preferences, accessibility requirements, and specific needs of both students and seniors. This meticulous approach leads to harmonious and mutually beneficial living arrangements.",
+
+  "step4_title": "Introduction and Trial Period",
+  "step4_desc": "Meet your potential match and experience living together temporarily.",
+  "step4_details": "Once a potential match is identified, we arrange an initial meeting in a comfortable setting. If both parties are interested, we facilitate a short trial period of 1-2 weeks where the student stays at the senior's residence. This gives both parties real-world experience of the arrangement before making a long-term commitment. Our team provides guidance and support throughout this crucial phase, helping to establish clear expectations and house rules.",
+
+  "step5_title": "Agreement and Moving In",
+  "step5_desc": "Formalize your arrangement and begin your intergenerational living experience.",
+  "step5_details": "After a successful trial period, both parties sign our comprehensive SamenWonen agreement covering accommodation terms, responsibilities, financial arrangements, and conflict resolution procedures. We provide support during the moving-in process, including practical guidance and resources for a smooth transition. Once settled, our team conducts regular check-ins during the first three months to address any concerns and ensure a harmonious living environment.",
+
+  "ongoing_support_title": "Ongoing Support",
+  "ongoing_support_desc": "We're with you throughout your entire intergenerational living journey.",
+  "ongoing_support_details": "SamenWonen provides continuous assistance through our dedicated support team available via phone, email, and in-person meetings. We offer regular community events, workshops, and resources to enhance your shared living experience. Quarterly check-ins help us address any emerging concerns, and our mediation services are available should any conflicts arise. Our commitment is to ensure a sustainable, enriching living arrangement for both students and seniors.",
 
   "benefits_title": "Mutual Benefits",
   "benefits_students_title": "For Students",
-  "benefits_students_item1": "Affordable and safe housing.",
-  "benefits_students_item2": "Meaningful social interaction.",
-  "benefits_students_item3": "Personal growth and life experience.",
+  "benefits_students_item1": "Affordable and safe housing in desirable locations.",
+  "benefits_students_item2": "Meaningful social interaction and intergenerational learning.",
+  "benefits_students_item3": "Personal growth, life experience, and practical skills development.",
+  "benefits_students_item4": "Reduced living expenses and potential for rent reduction through assistance.",
+  "benefits_students_item5": "Enhanced academic performance through stable housing situation.",
+  
   "benefits_seniors_title": "For Seniors & Care Homes",
-  "benefits_seniors_item1": "Increased vitality and companionship.",
-  "benefits_seniors_item2": "Help with daily tasks and technology.",
-  "benefits_seniors_item3": "Strengthened community feeling.",
+  "benefits_seniors_item1": "Increased vitality, companionship, and reduced loneliness.",
+  "benefits_seniors_item2": "Practical assistance with daily tasks, technology, and household maintenance.",
+  "benefits_seniors_item3": "Strengthened community feeling and intergenerational connections.",
+  "benefits_seniors_item4": "Additional income or help to offset living expenses.",
+  "benefits_seniors_item5": "Increased sense of purpose and contribution to younger generations.",
+  "testimonials_title": "Success Story",
+  "testimonial1_name": "Lisa & Mrs. Jansen",
+  "testimonial1_student": "Finding housing was so difficult until I discovered SamenWonen. Now I have an affordable place to live and a wonderful relationship with Mrs. Jansen that goes beyond just sharing a home.",
+  "testimonial1_senior": "Having Lisa around has brought so much joy into my life. She helps me with my computer and takes me shopping, while I cook traditional meals she loves. It's the perfect arrangement.",
+
+  "faq_title": "Frequently Asked Questions",
+  "faq1_question": "How long does the matching process typically take?",
+  "faq1_answer": "The matching process usually takes 2-4 weeks, depending on profile completeness and specific requirements. Our thorough approach ensures quality matches over quick placements.",
+  
+  "faq2_question": "What happens if the living arrangement doesn't work out?",
+  "faq2_answer": "Our agreements include a notice period (typically 30 days) for both parties. If issues arise, our support team offers mediation before any decisions are made. We can also help with finding a new match if necessary.",
+  
+  "faq3_question": "What kind of support do you offer after moving in?",
+  "faq3_answer": "We provide ongoing support through regular check-ins, a dedicated support line, community events, and conflict resolution services if needed. Our team remains available throughout your entire experience with SamenWonen.",
+
+  "commitment_title": "Our Commitment",
+  "commitment_desc": "SamenWonen is more than just a housing solution—it's a carefully designed community program that prioritizes quality matches, safety, and mutual benefit. We stay involved throughout the entire process to ensure both students and seniors have a positive, enriching experience.",
 
   "cta_title": "Ready to Take the Next Step?",
-  "cta_subtitle": "Have more questions? Check our FAQ or get in touch with our team directly.",
+  "cta_subtitle": "Have more questions? Check our FAQ or get in touch with our team directly for personalized guidance.",
   "cta_button_contact": "Contact Us",
   "cta_button_faq": "View FAQ"
 } 
