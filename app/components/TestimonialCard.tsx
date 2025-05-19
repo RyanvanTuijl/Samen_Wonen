@@ -13,6 +13,7 @@ interface TestimonialCardProps {
   colorScheme?: 'primary' | 'secondary' | 'accent' | 'neutral';
   className?: string;
   sizes?: string; // Added sizes prop for Next.js image optimization
+  accentColor?: string; // Added for backward compatibility
 }
 
 export default function TestimonialCard({
@@ -23,7 +24,8 @@ export default function TestimonialCard({
   rating = 5,
   colorScheme = 'primary',
   className,
-  sizes
+  sizes,
+  accentColor // For backward compatibility
 }: TestimonialCardProps) {
   
   // Color classes
@@ -55,12 +57,11 @@ export default function TestimonialCard({
   };
 
   const { bg, light, border, text } = colorClasses[colorScheme];
-
   return (
     <div className={cn(
       "flex flex-col bg-white rounded-xl shadow-md p-6 mb-4 border",
       border,
-      className
+      className || accentColor // Use className or fallback to accentColor
     )}>
       {/* Quote marks */}
       <div className={cn("mb-4", light)}>
