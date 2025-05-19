@@ -59,17 +59,16 @@ export default function LanguageSwitcher() {
   const currentLanguage = languages.find(lang => lang.code === currentLocale);
 
   return (
-    <div className="relative">
-      <button
+    <div className="relative">      <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors"
-      >
-        <Image
+      >        <Image
           src={currentLanguage?.flag || '/flags/nl.svg'}
           alt={currentLanguage?.name || 'Nederlands'}
           width={20}
           height={15}
           className="rounded-sm"
+          style={{ maxWidth: '20px', height: '15px' }}
         />
         <span className="text-sm font-medium">{currentLanguage?.code.toUpperCase()}</span>
         <svg
@@ -96,13 +95,13 @@ export default function LanguageSwitcher() {
               className={`w-full px-4 py-2 text-left flex items-center space-x-3 hover:bg-gray-100 transition-colors ${
                 currentLocale === lang.code ? 'bg-gray-50' : ''
               }`}
-            >
-              <Image
+            >              <Image
                 src={lang.flag}
                 alt={lang.name}
                 width={20}
                 height={15}
                 className="rounded-sm"
+                style={{ maxWidth: '20px', height: '15px' }}
               />
               <span className="text-sm">{lang.name}</span>
               {currentLocale === lang.code && (

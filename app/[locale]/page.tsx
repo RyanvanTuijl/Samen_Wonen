@@ -13,6 +13,7 @@ import InteractiveMap from '../components/Map';
 import RoleSelection from '../components/RoleSelection';
 import RoleButton from '../components/RoleButton';
 import Image from 'next/image';
+import PageHeader from '../components/PageHeader';
 import { useTranslation as useClientTranslation } from '../i18n/client';
 
 export default function Home() {
@@ -47,10 +48,24 @@ export default function Home() {
       <main className="min-h-screen">
         {/* Hero Section with gradient background */}
         <section className="relative hero-gradient text-white py-32 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary-600 to-primary-800 opacity-90"></div>
+          <div className="absolute inset-0">
+            <Image 
+              src="/images/headers/home-header.png" 
+              alt="Hero Banner" 
+              fill 
+              className="object-cover mix-blend-overlay"
+              priority
+            />
+          </div>
           <div className="absolute inset-0 bg-[url('/pattern.svg')] opacity-10"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent"></div>
-          <div className="container mx-auto px-4 relative">
+          <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl">
+              {t('hero_tagline') && (
+                <div className="inline-block p-2 px-5 bg-white/10 backdrop-blur-sm rounded-full mb-6 animate-fade-in">
+                  <span className="text-sm font-medium">{t('hero_tagline')}</span>
+                </div>
+              )}
               <h1 className="text-6xl md:text-8xl font-bold mb-8 leading-tight animate-fade-in">
                 {t('hero_title')}
               </h1>

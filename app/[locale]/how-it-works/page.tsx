@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { useTranslation } from '../../i18n'; // Server-side hook
 import Link from 'next/link';
+import ServerPageHeader from '../../components/ServerPageHeader';
 
 // Updated Steps Data with new icon SVGs (inline for now)
 const steps = [
@@ -65,17 +66,12 @@ const steps = [
 export default async function HowItWorksPage({ params: { locale } }: { params: { locale: string } }) {
   const { t } = await useTranslation(locale, 'how-it-works');
 
-  return (
-    <div className="bg-gradient-to-b from-white to-blue-50 min-h-screen">      {/* Page Header */}      <section className="relative bg-gradient-to-r from-primary to-secondary text-white py-28 md:py-40 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/pattern.svg')] opacity-10 animate-pattern"></div>        <div className="container mx-auto px-6 relative z-10 text-center">
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-5 animate-fade-in tracking-tight">
-            {t('page_title')}
-          </h1>
-          <p className="text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto animate-fade-in-up opacity-90">
-            {t('page_subtitle')}
-          </p>
-        </div>
-      </section>
+  return (    <div className="bg-gradient-to-b from-white to-blue-50 min-h-screen">
+      {/* Page Header */}      <ServerPageHeader
+        title={t('page_title')}
+        subtitle={t('page_subtitle')}
+        backgroundImage="/images/headers/how-it-works-header.png"
+      />
 
       {/* Detailed Steps Section */}
       <section className="py-20 md:py-28">

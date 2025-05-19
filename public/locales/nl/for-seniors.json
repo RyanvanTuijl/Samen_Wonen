@@ -1,17 +1,91 @@
 {
-  "page_title": "Voor Ouderen",
-  "page_subtitle": "Verrijk uw leven met intergenerationeel gezelschap",
-  "section1_title": "Een Nieuwe Manier van Wonen",
-  "section1_p1": "SamenWonen verbindt ouderen met studenten die op zoek zijn naar betaalbare huisvesting, waardoor betekenisvolle intergenerationele relaties ontstaan die voor iedereen voordelig zijn.",
-  "section1_p2": "Door uw huis open te stellen voor een student, krijgt u gezelschap, hulp bij dagelijkse taken, en het plezier van het mentorschap van een jongere, terwijl u uw onafhankelijkheid behoudt.",
-  "image_alt": "Senior en student die samen tijd doorbrengen",
-  "section2_title": "Voordelen voor Ouderen",
-  "benefit1": "Minder eenzaamheid door regelmatige sociale interactie",
-  "benefit2": "Hulp met technologie, huishoudelijke taken en boodschappen",
-  "benefit3": "Extra veiligheid met iemand anders in huis",
-  "benefit4": "Extra inkomen door het verhuren van ongebruikte ruimte",
-  "section3_title": "Hoe Wij U Ondersteunen",
-  "section3_p1": "We matchen u zorgvuldig met compatibele studenten op basis van persoonlijkheid, interesses en verwachtingen.",
-  "section3_p2": "Ons team biedt doorlopende ondersteuning, regelmatige check-ins en bemiddeling indien nodig om ervoor te zorgen dat de regeling voor iedereen goed werkt.",
-  "cta_button": "Aanmelden als Senior Gastgezin"
+  "page_title": "HomeShare: Een Oplossing voor Ouderen",
+  "page_subtitle": "Verander uw extra ruimte in gezelschap, veiligheid en maandelijks inkomen",
+  "for_seniors_label": "Senior HomeShare Programma",
+  "section1_title": "Herdefinieer Uw Woning als een Centrum van Verbinding en Financiële Zekerheid",
+  "section1_p1": "Is uw huis gevuld met extra ruimte maar mist het de energie die het ooit had? Ons zorgvuldig samengestelde HomeShare programma koppelt senioren aan respectvolle, vooraf gescreende studenten die leven, hulp en extra inkomen bij u aan de deur brengen.",
+  "section1_p2": "Ervaar de perfecte balans tussen onafhankelijkheid en ondersteuning: betekenisvol gezelschap wanneer u dat wenst, hulp met dagelijkse taken wanneer u die nodig heeft, en betrouwbaar maandelijks inkomen dat uw financiële vrijheid vergroot.",
+  "learn_more": "Ontdek hoe ons HomeShare werkt",
+  "image_alt": "Senior huiseigenaar en student die kwalitatief tijd delen over koffie in een lichte woonkamer",
+  
+  "benefits_label": "Belangrijke Voordelen",
+  "benefits_title": "Hoe HomeShare het Leven van Senioren Verrijkt",
+  "benefits_subtitle": "Ons programma is zorgvuldig ontworpen om aan de specifieke behoeften van senioren te voldoen, met tastbare verbeteringen voor financiële zekerheid, sociaal welzijn en levenskwaliteit.",
+  
+  "benefit1_title": "Duurzame Inkomstenstroom",
+  "benefit1_desc": "Genereer €450-€1.100+ per maand uit uw ongebruikte ruimte. Dit betrouwbare inkomen kan nutsvoorzieningen, onroerend goedbelasting, zorgkosten dekken of uw pensioenlevensstijl verbeteren.",
+  "benefit2_title": "Betekenisvol Gezelschap",
+  "benefit2_desc": "Geniet van stimulerende gesprekken en gedeelde activiteiten die isolement bestrijden zonder privacy op te offeren. Onze zorgvuldig gematchte studenten respecteren uw ruimte terwijl ze welkome sociale verbinding bieden.",
+  "benefit3_title": "Zelfverzekerd Thuis Blijven Wonen",
+  "benefit3_desc": "Blijf langer in uw gekoesterde huis en gemeenschap met extra financiële middelen en huishoudelijke ondersteuning. HomeShare biedt een alternatief voor verhuizen of assistentiewonen terwijl u uw onafhankelijkheid behoudt.",
+  "benefit4_title": "Intergenerationele Uitwisseling",
+  "benefit4_desc": "Ervaar de vitaliteit van intergenerationele relaties. Deel uw wijsheid terwijl u frisse perspectieven en energie krijgt van uw studentgezelschap. Veel van onze matches ontwikkelen langdurige, familieachtige banden.",
+  "benefit5_title": "Verbeterde Veiligheid",
+  "benefit5_desc": "Geniet van meer gemoedsrust wetende dat er iemand in uw huis aanwezig is, vooral 's avonds of tijdens het reizen. Veel huiseigenaren rapporteren zich aanzienlijk veiliger te voelen met een vertrouwd gezelschap in huis.",
+  "benefit6_title": "Praktische Ondersteuning",
+  "benefit6_desc": "Ontvang hulp bij technologische uitdagingen, huishoudelijke taken en incidentele boodschappen. Veel studenten helpen met smartphonegebruik, computerproblemen, tuinonderhoud, huisdierenverzorging of boodschappen als onderdeel van hun regeling.",
+
+  "how_it_works_label": "Onze Aanpak",
+  "how_it_works_title": "Uw Reis naar Succesvol Huis Delen",
+  "how_it_works_subtitle": "We hebben ons matchingsproces verfijnd door jarenlange ervaring, met prioriteit voor veiligheid, compatibiliteit en wederzijdse tevredenheid. Elke stap is ontworpen met uw comfort in gedachten.",
+  
+  "step1_title": "Persoonlijk Consult",
+  "step1_desc": "Begin met een vrijblijvend gesprek met onze seniorenspecialist die het programma zal uitleggen, uw vragen zal beantwoorden en u zal helpen bepalen of HomeShare geschikt voor u is.",
+  "step2_title": "Woningbeoordeling",
+  "step2_desc": "Onze coördinator bezoekt uw huis om uw leefruimte te begrijpen, uw voorkeuren en levensstijl te bespreken en richtlijnen op te stellen voor uw ideale huisdeelregeling.",
+  "step3_title": "Zorgvuldige Matching",
+  "step3_desc": "Met behulp van ons eigen compatibiliteitsalgoritme en persoonlijke inzichten van ons team, identificeren we potentiële studentmatches die grondig zijn gescreend, geïnterviewd en waarvan de achtergrond is gecontroleerd.",
+  "step4_title": "Doorlopende Ondersteuning",
+  "step4_desc": "Onze relatie gaat door met regelmatige check-ins, bemiddeling indien nodig en snelle hulp bij eventuele zorgen. We zijn slechts een telefoontje verwijderd gedurende uw gehele HomeShare-ervaring.",
+  "detailed_process_button": "Leer meer over ons volledige matchingsproces",
+
+  "trust_image_alt": "HomeShare coördinator bespreekt veiligheidsmaatregelen met een senior huiseigenaar",
+  "safety_label": "Uw Veiligheid Is Niet-Onderhandelbaar",
+  "safety_title": "Toonaangevende Veiligheidsstandaarden",
+  "safety_p1": "We erkennen dat het uitnodigen van iemand in uw huis buitengewoon vertrouwen vereist. Daarom hebben we het meest uitgebreide screeningssysteem in de huisdelingsindustrie ontwikkeld, met waarborgen die de meeste huurregelingen overtreffen.",
+  "safety_check1": "Meerlaagse achtergrondscreening inclusief strafblad, identiteitsverificatie en bevestiging van academische inschrijving",
+  "safety_check2": "Persoonlijke interviews, karakterreferenties en compatibiliteitsprofilering met onze getrainde matchingsspecialisten",
+  "safety_check3": "Juridisch herziene HomeShare-overeenkomsten die duidelijk grenzen, verantwoordelijkheden en voorwaarden voor beide partijen definiëren",
+  "safety_check4": "Toegewijde ondersteuningscoördinator toegewezen aan elke match met geplande check-ins en 24/7 noodhulp",
+  "learn_about_safety": "Verken onze uitgebreide veiligheidsprotocollen",
+
+  "testimonials_label": "Echte Ervaringen",
+  "testimonials_title": "Wat Onze Senior HomeShare-leden Zeggen",
+  "testimonials_subtitle": "Lees ervaringen uit eerste hand van senioren die nieuwe mogelijkheden hebben ontdekt via ons programma. Deze authentieke verhalen weerspiegelen de levensveranderende impact van huisdelen.",
+  
+  "testimonial1_quote": "HomeShare heeft alles voor mij veranderd. Mijn student Jennifer helpt me met mijn iPad, vergezelt me op wandelingen, en de extra €750 per maand dekt mijn onroerendgoedbelasting. Ik heb zowel financiële zekerheid als een heerlijk gezelschap gekregen dat weer lachen in mijn huis brengt.",
+  "testimonial1_author": "Margaretha P., 72",
+  "testimonial1_location": "HomeShare-lid voor 2+ jaar",
+  
+  "testimonial2_quote": "Na het verlies van mijn vrouw was de stilte in ons huis oorverdovend. Mijn student Carlos heeft weer leven in deze kamers gebracht. We delen twee keer per week het avondeten, en hij leert me Spaans. Ik slaap beter wetende dat er iemand anders in het huis is, en het huurinkomen is een enorme hulp geweest met medische kosten.",
+  "testimonial2_author": "Robert K., 76",
+  "testimonial2_location": "HomeShare-lid voor 3 jaar",
+  
+  "testimonial3_quote": "Ik was aanvankelijk aarzelend, maar HomeShare's grondige screeningsproces stelde me gerust. Mijn match met Sarah is perfect—ze respecteert mijn routines en privacy, terwijl ze heerlijk gezelschap biedt wanneer ik daar zin in heb. Ze houdt mijn tuin bloeiend en helpt me in contact te blijven met mijn kleinkinderen via videogesprekken. Het extra inkomen heeft me in staat gesteld voor het eerst in jaren op vakantie te gaan.",
+  "testimonial3_author": "Elisabeth W., 79",
+  "testimonial3_location": "HomeShare-lid sinds 2022",
+  
+  "read_more_stories": "Ontdek meer HomeShare-verhalen",
+
+  "faq_label": "Vragen Beantwoord",
+  "faq_title": "Wat Senior Huiseigenaren Willen Weten",
+  "faq_subtitle": "We hebben antwoorden verzameld op de vragen die we het vaakst horen van potentiële HomeShare-leden. Als uw vraag hier niet wordt beantwoord, is ons team slechts een telefoontje verwijderd.",
+  
+  "faq1_question": "Hoeveel maandelijks inkomen kan ik verwachten van HomeShare?",
+  "faq1_answer": "Maandelijks inkomen varieert typisch van €550-€1.300 afhankelijk van uw locatie, aangeboden ruimte en inbegrepen voorzieningen. Stedelijke gebieden en privébadkamers vragen hogere tarieven. Onze HomeShare-specialisten zullen uw ruimte beoordelen en adviseren over optimale prijzen op basis van marktgegevens en vergelijkbare regelingen in uw omgeving.",
+  
+  "faq2_question": "Welke veiligheidsmaatregelen zorgen voor mijn veiligheid met een student in mijn huis?",
+  "faq2_answer": "Onze toonaangevende 7-punts screening omvat uitgebreide achtergrondcontroles, identiteitsverificatie, inschrijvingsbevestiging, referentie-interviews, kredietbeoordelingen, persoonlijke evaluaties en beoordelingen van sociale media. Slechts 32% van de aanvragers slaagt voor onze strenge normen. U heeft altijd de laatste goedkeuring na persoonlijke ontmoetingen onder toezicht, en we houden gedurende de hele regeling regelmatig toezicht.",
+  
+  "faq3_question": "Wat gebeurt er als mijn HomeShare-regeling niet werkt?",
+  "faq3_answer": "Hoewel 94% van onze matches succesvol blijft, begrijpen we dat soms dingen niet gaan zoals gepland. Alle regelingen omvatten een proefperiode van 2 weken en eenvoudige exitbepalingen. Onze toegewijde bemiddelaars kunnen vaak kleine problemen oplossen, maar als verhuizing noodzakelijk wordt, beginnen we snel met het zoeken naar een geschiktere match terwijl we zorgen voor een soepele overgang.",
+  
+  "faq4_question": "Hoeveel interactie zal ik hebben met mijn student-huisgenoot?",
+  "faq4_answer": "Uw HomeShare-ervaring is aangepast aan uw sociale voorkeuren. Sommige leden genieten van regelmatige gedeelde maaltijden en activiteiten, terwijl anderen de voorkeur geven aan meer onafhankelijke regelingen met occasionele check-ins. Tijdens ons intakeproces bespreken we uw ideale balans van interactie en privacy, en matchen we u dienovereenkomstig. Alle verwachtingen zijn gedocumenteerd in onze HomeShare-overeenkomst, die kan worden aangepast naarmate uw relatie evolueert.",
+  
+  "view_all_faqs": "Verken onze uitgebreide FAQ-sectie",
+
+  "cta_title": "Transformeer Uw Extra Ruimte in Financiële Zekerheid en Betekenisvolle Verbinding",
+  "cta_subtitle": "Sluit u aan bij meer dan 5.000 senioren die de perfecte balans hebben ontdekt tussen onafhankelijkheid, inkomen en gezelschap via ons HomeShare-programma.",
+  "cta_button": "Begin Uw HomeShare-reis"
 }

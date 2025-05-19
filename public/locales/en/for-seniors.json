@@ -1,17 +1,91 @@
 {
-  "page_title": "For Seniors",
-  "page_subtitle": "Enrich your life with intergenerational companionship",
-  "section1_title": "A New Way of Living",
-  "section1_p1": "SamenWonen connects seniors with students looking for affordable housing, creating meaningful intergenerational relationships that benefit everyone involved.",
-  "section1_p2": "By opening your home to a student, you gain companionship, assistance with daily tasks, and the joy of mentoring a young person, while maintaining your independence.",
-  "image_alt": "Senior and student enjoying time together",
-  "section2_title": "Benefits for Seniors",
-  "benefit1": "Reduced loneliness through regular social interaction",
-  "benefit2": "Help with technology, household tasks, and errands",
-  "benefit3": "Extra security with someone else in the home",
-  "benefit4": "Additional income from renting out unused space",
-  "section3_title": "How We Support You",
-  "section3_p1": "We carefully match you with compatible students based on personality, interests, and expectations.",
-  "section3_p2": "Our team provides ongoing support, regular check-ins, and mediation if needed to ensure the arrangement works well for everyone.",
-  "cta_button": "Apply as a Senior Host"
+  "page_title": "HomeShare: A Solution Made for Seniors",
+  "page_subtitle": "Transform your extra space into companionship, security, and monthly income",
+  "for_seniors_label": "Senior HomeShare Program",
+  "section1_title": "Reimagine Your Home as a Hub of Connection and Financial Security",
+  "section1_p1": "Is your home filled with extra space but missing the energy it once had? Our carefully curated HomeShare program matches seniors with respectful, pre-screened students who bring life, assistance, and supplemental income to your doorstep.",
+  "section1_p2": "Experience the perfect balance of independence and support: meaningful companionship when you desire it, help with daily tasks when you need it, and reliable monthly income that enhances your financial freedom.",
+  "learn_more": "Discover how our HomeShare works",
+  "image_alt": "Senior homeowner and student sharing quality time over coffee in a bright living room",
+  
+  "benefits_label": "Key Advantages",
+  "benefits_title": "How HomeShare Enriches Senior Lifestyles",
+  "benefits_subtitle": "Our program is thoughtfully designed to address the specific needs of seniors, providing tangible improvements to financial security, social wellness, and quality of life.",
+  
+  "benefit1_title": "Sustainable Income Stream",
+  "benefit1_desc": "Generate $500-$1,200+ monthly from your unused space. This dependable income can cover utilities, property taxes, healthcare costs, or enhance your retirement lifestyle.",
+  "benefit2_title": "Meaningful Companionship",
+  "benefit2_desc": "Enjoy stimulating conversations and shared activities that combat isolation without sacrificing privacy. Our carefully matched students respect your space while providing welcome social connection.",
+  "benefit3_title": "Age in Place Confidently",
+  "benefit3_desc": "Remain in your cherished home and community longer with added financial resources and household support. HomeShare provides an alternative to downsizing or assisted living while maintaining your independence.",
+  "benefit4_title": "Intergenerational Exchange",
+  "benefit4_desc": "Experience the vitality of cross-generational relationships. Share your wisdom while gaining fresh perspectives and energy from your student companion. Many of our matches develop lasting, family-like bonds.",
+  "benefit5_title": "Enhanced Security",
+  "benefit5_desc": "Enjoy greater peace of mind knowing someone is present in your home, particularly during evenings or when traveling. Many homeowners report feeling significantly safer with a trusted companion in the house.",
+  "benefit6_title": "Practical Support",
+  "benefit6_desc": "Receive help with technology challenges, household tasks, and occasional errands. Many students assist with smartphone use, computer issues, garden maintenance, pet care, or grocery shopping as part of their arrangement.",
+
+  "how_it_works_label": "Our Approach",
+  "how_it_works_title": "Your Journey to Successful Home Sharing",
+  "how_it_works_subtitle": "We've refined our matching process through years of experience, prioritizing safety, compatibility, and mutual satisfaction. Every step is designed with your comfort in mind.",
+  
+  "step1_title": "Personalized Consultation",
+  "step1_desc": "Begin with a no-obligation conversation with our senior specialist who will explain the program, answer your questions, and help you determine if HomeShare is right for you.",
+  "step2_title": "Home Assessment",
+  "step2_desc": "Our coordinator visits your home to understand your living space, discuss your preferences and lifestyle, and help establish guidelines for your ideal home-sharing arrangement.",
+  "step3_title": "Careful Matching",
+  "step3_desc": "Using our proprietary compatibility algorithm and personal insights from our team, we identify potential student matches who have been thoroughly screened, interviewed, and background-checked.",
+  "step4_title": "Ongoing Support",
+  "step4_desc": "Our relationship continues with regular check-ins, mediation if needed, and prompt assistance with any concerns. We're just a phone call away throughout your entire HomeShare experience.",
+  "detailed_process_button": "Learn about our full matching process",
+
+  "trust_image_alt": "HomeShare coordinator discussing safety measures with a senior homeowner",
+  "safety_label": "Your Safety Is Non-Negotiable",
+  "safety_title": "Industry-Leading Security Standards",
+  "safety_p1": "We recognize that inviting someone into your home requires extraordinary trust. That's why we've developed the most comprehensive vetting system in the home-sharing industry, with safeguards exceeding those of most rental arrangements.",
+  "safety_check1": "Multi-tiered background screening including criminal history, identity verification, and academic enrollment confirmation",
+  "safety_check2": "Personal interviews, character references, and compatibility profiling with our trained matching specialists",
+  "safety_check3": "Legally-reviewed HomeShare agreements that clearly define boundaries, responsibilities, and terms for both parties",
+  "safety_check4": "Dedicated support coordinator assigned to each match with scheduled check-ins and 24/7 emergency assistance",
+  "learn_about_safety": "Explore our comprehensive safety protocols",
+
+  "testimonials_label": "Real Experiences",
+  "testimonials_title": "What Our Senior HomeShare Members Say",
+  "testimonials_subtitle": "Read firsthand accounts from seniors who discovered new possibilities through our program. These authentic stories reflect the life-changing impact of home-sharing.",
+  
+  "testimonial1_quote": "HomeShare changed everything for me. My student Jennifer helps me navigate my iPad, accompanies me on walks, and the extra $850 monthly covers my property taxes. I've gained both financial security and a delightful companion who brings laughter back into my home.",
+  "testimonial1_author": "Margaret P., 72",
+  "testimonial1_location": "HomeShare member for 2+ years",
+  
+  "testimonial2_quote": "After losing my wife, the silence in our home was deafening. My student Carlos has brought life back into these rooms. We share dinner twice weekly, and he's teaching me Spanish. I sleep better knowing someone else is in the house, and the rental income has been a tremendous help with medical expenses.",
+  "testimonial2_author": "Robert K., 76",
+  "testimonial2_location": "HomeShare member for 3 years",
+  
+  "testimonial3_quote": "I was initially hesitant, but HomeShare's thorough screening process reassured me. My match with Sarah has been perfect—she respects my routines and privacy, while providing delightful company when I'm in the mood. She keeps my garden thriving and helps me stay connected with my grandchildren through video calls. The additional income has allowed me to take a vacation for the first time in years.",
+  "testimonial3_author": "Elizabeth W., 79",
+  "testimonial3_location": "HomeShare member since 2022",
+  
+  "read_more_stories": "Discover more HomeShare journeys",
+
+  "faq_label": "Questions Answered",
+  "faq_title": "What Senior Homeowners Want to Know",
+  "faq_subtitle": "We've compiled answers to the questions we hear most frequently from potential HomeShare members. If your question isn't answered here, our team is just a phone call away.",
+  
+  "faq1_question": "How much monthly income can I expect from HomeShare?",
+  "faq1_answer": "Monthly income typically ranges from $650-$1,500 depending on your location, space offered, and included amenities. Urban areas and private bathrooms command higher rates. Our HomeShare specialists will assess your space and advise on optimal pricing based on market data and comparable arrangements in your area.",
+  
+  "faq2_question": "What security measures ensure my safety with a student in my home?",
+  "faq2_answer": "Our industry-leading 7-point screening includes comprehensive background checks, identity verification, enrollment confirmation, reference interviews, credit assessments, in-person evaluations, and social media reviews. Only 32% of applicants pass our rigorous standards. You'll always have final approval after supervised in-person meetings, and we maintain regular oversight throughout the arrangement.",
+  
+  "faq3_question": "What happens if my HomeShare arrangement isn't working out?",
+  "faq3_answer": "While 94% of our matches continue successfully, we understand that sometimes things don't work as planned. All arrangements include a 2-week trial period and straightforward exit provisions. Our dedicated mediators can often resolve minor issues, but if relocation becomes necessary, we'll quickly begin searching for a more suitable match while ensuring a smooth transition.",
+  
+  "faq4_question": "How much interaction will I have with my student housemate?",
+  "faq4_answer": "Your HomeShare experience is customized to your social preferences. Some members enjoy regular shared meals and activities, while others prefer more independent arrangements with occasional check-ins. During our intake process, we'll discuss your ideal balance of interaction and privacy, and match you accordingly. All expectations are documented in our HomeShare Agreement, which can be adjusted as your relationship evolves.",
+  
+  "view_all_faqs": "Explore our comprehensive FAQ section",
+
+  "cta_title": "Transform Your Extra Space into Financial Security and Meaningful Connection",
+  "cta_subtitle": "Join over 5,000 seniors who have discovered the perfect balance of independence, income, and companionship through our HomeShare program.",
+  "cta_button": "Begin Your HomeShare Journey"
 }
