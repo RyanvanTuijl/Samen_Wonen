@@ -50,24 +50,27 @@ export default function RoleButton() {
       color: 'bg-neutral-600',
       textColor: 'text-white'
     };
-  };
-  const handleSelectRole = (roleId: string) => {
+  };  const handleSelectRole = (roleId: string) => {
     // Store user role preference in a cookie that lasts 30 days
     Cookies.set('userRole', roleId, { expires: 30 });
     
-    // Navigate to the appropriate page based on role
-    switch(roleId) {
-      case 'student':
-        router.push(`/${locale}/for-students`);
-        break;
-      case 'senior':
-        router.push(`/${locale}/for-seniors`);
-        break;
-      case 'homeowner':
-        router.push(`/${locale}/for-homes`);
-        break;
-      default:
-        router.push(`/${locale}`);
+    // Add console log to debug
+    console.log(`RoleButton: Redirecting to /${locale} after selecting role: ${roleId}`);
+    
+    // Try both redirection methods
+    try {
+      // Primary method using Next.js router
+      router.push(`/${locale}`);
+      
+      // Fallback method using window.location
+      // Add a small delay to ensure the cookie is set before redirecting
+      setTimeout(() => {
+        window.location.href = `/${locale}`;
+      }, 100);
+    } catch (error) {
+      console.error('Redirection error:', error);
+      // Fallback if any error occurs
+      window.location.href = `/${locale}`;
     }
     
     setIsOpen(false);

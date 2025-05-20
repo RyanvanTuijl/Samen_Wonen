@@ -331,7 +331,7 @@ export default async function ForStudentsPage({ params: { locale } }: { params: 
               role={t('student_role') || 'Student'}
               quote={t('testimonial1_quote') || 'Finding this home sharing program changed my university experience completely. Not only did I find affordable housing, but I gained a mentor and friend.'}
               imageSrc="/images/contact/testimonials/testimonial1.jpg"
-              accentColor="border-primary-100"
+              className="border-primary-100"
             />
 
             <TestimonialCard 
@@ -339,7 +339,7 @@ export default async function ForStudentsPage({ params: { locale } }: { params: 
               role={t('student_role') || 'Student'}
               quote={t('testimonial2_quote') || 'As an international student, I was worried about finding accommodation. Thanks to this program, I found a welcoming home where I could practice the language and learn about local culture.'}
               imageSrc="/images/contact/testimonials/testimonial2.jpg"
-              accentColor="border-secondary-100"
+              className="border-secondary-100"
             />
           </div>
         </div>

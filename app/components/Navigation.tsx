@@ -79,6 +79,12 @@ export default function Navigation({ isHome = false }: NavigationProps) {
               {t('nav_for_municipalities')}
             </Link>
             <Link 
+              href={createLocalePath('/courses')} 
+              className="nav-link"
+            >
+              {t('nav_courses')}
+            </Link>
+            <Link 
               href={createLocalePath('/contact')} 
               className="nav-link"
             >
@@ -177,6 +183,13 @@ export default function Navigation({ isHome = false }: NavigationProps) {
               onClick={() => setIsMenuOpen(false)}
             >
               {t('nav_for_municipalities')}
+            </Link>
+            <Link
+              href={createLocalePath('/courses')}
+              className="block nav-link"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {t('nav_courses')}
             </Link>
             <Link
               href={createLocalePath('/contact')}

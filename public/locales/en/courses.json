@@ -1,0 +1,44 @@
+{
+  "page_title": "Courses for Students",
+  "page_subtitle": "Free educational courses to help you make the most of your SamenWonen experience.",
+  "courses_label": "Courses",
+  "section1_title": "Develop Essential Skills",
+  "section1_p1": "These courses are designed to give you the knowledge and skills you need to successfully live with and interact with seniors.",
+  "section1_p2": "All courses are freely accessible. Donations are appreciated to support our program.",
+  "donate_button": "Support our work",
+  
+  "course_dementia_title": "Understanding Dementia",
+  "course_dementia_desc": "Learn about different forms of dementia, how they affect seniors, and practical communication strategies for daily interactions.",
+  "course_dementia_duration": "3 hours",
+  
+  "course_activities_title": "Meaningful Activities for Seniors",
+  "course_activities_desc": "Discover creative and engaging activities that can be adapted to different mobility levels and interests to connect with older housemates.",
+  "course_activities_duration": "2 hours",
+  
+  "course_first_aid_title": "First Aid for Senior Care",
+  "course_first_aid_desc": "Learn essential first aid skills specifically focused on seniors, including fall prevention, stroke recognition, and what to do in emergencies.",
+  "course_first_aid_duration": "4 hours",
+  
+  "course_communication_title": "Effective Cross-Generational Communication",
+  "course_communication_desc": "Improve your communication skills for intergenerational conversations, learning active listening and bridging techniques when perspectives differ.",
+  "course_communication_duration": "2 hours",
+  
+  "course_emotional_title": "Emotional Wellbeing and Boundaries",
+  "course_emotional_desc": "Learn to establish healthy boundaries while building meaningful connections, and develop strategies for understanding emotional challenges in senior care.",
+  "course_emotional_duration": "3 hours",
+  
+  "course_cultural_title": "Cultural Competency in Senior Care",
+  "course_cultural_desc": "Explore how cultural backgrounds influence seniors' experience and learn how to respectfully navigate different traditions and expectations.",
+  "course_cultural_duration": "2 hours",
+  
+  "course_digital_title": "Sharing Digital Skills",
+  "course_digital_desc": "Strategies for effectively teaching digital skills to seniors, from basic smartphone use to video calling family members.",
+  "course_digital_duration": "2 hours",
+  
+  "learn_more": "Learn more",
+  "enroll": "Enroll",
+  "free_course": "Free course",
+  "donation_welcome": "Donations welcome",
+  "hours": "hours",
+  "certificate": "Certificate available"
+}

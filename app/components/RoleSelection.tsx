@@ -41,19 +41,23 @@ export default function RoleSelection() {
     // Store user role preference in a cookie that lasts 30 days
     Cookies.set('userRole', roleId, { expires: 30 });
     
-    // Navigate to the appropriate page based on role
-    switch(roleId) {
-      case 'student':
-        router.push(`/${locale}/for-students`);
-        break;
-      case 'senior':
-        router.push(`/${locale}/for-seniors`);
-        break;
-      case 'homeowner':
-        router.push(`/${locale}/for-homes`);
-        break;
-      default:
-        router.push(`/${locale}`);
+    // Add console log to debug
+    console.log(`Redirecting to /${locale} after selecting role: ${roleId}`);
+    
+    // Try both redirection methods
+    try {
+      // Primary method using Next.js router
+      router.push(`/${locale}`);
+      
+      // Fallback method using window.location
+      // Add a small delay to ensure the cookie is set before redirecting
+      setTimeout(() => {
+        window.location.href = `/${locale}`;
+      }, 100);
+    } catch (error) {
+      console.error('Redirection error:', error);
+      // Fallback if any error occurs
+      window.location.href = `/${locale}`;
     }
   };
 
@@ -93,6 +97,10 @@ export default function RoleSelection() {
                 <h3 className="text-2xl font-bold mb-4 text-neutral-800">{role.title}</h3>
                 <p className="text-neutral-600 mb-6">{role.description}</p>
                 <button 
+                  onClick={(e) => {
+                    e.stopPropagation(); // Prevent double triggering with parent div
+                    selectRole(role.id);
+                  }}
                   className={`w-full py-3 px-6 rounded-lg bg-gradient-to-r ${role.color} 
                              text-white font-medium transform transition hover:scale-105`}
                 >

@@ -1,0 +1,29 @@
+{
+  "page_title": "Support Our Work",
+  "page_subtitle": "Your donations help us provide free educational resources to students participating in the SamenWonen program.",
+  "section1_title": "Support Free Education",
+  "section1_p1": "While our courses are offered free of charge to students, your donations make it possible for us to continue creating high-quality educational content.",
+  "section1_p2": "Every contribution, no matter how small, helps us maintain our platform and develop new courses.",
+  
+  "donation_option1_amount": "€10",
+  "donation_option1_title": "Supporter",
+  "donation_option1_desc": "Cover the costs of hosting our platform for one month.",
+  
+  "donation_option2_amount": "€25",
+  "donation_option2_title": "Contributor",
+  "donation_option2_desc": "Help produce educational materials for one course module.",
+  
+  "donation_option3_amount": "€50",
+  "donation_option3_title": "Sponsor",
+  "donation_option3_desc": "Sponsor a full course for one student.",
+  
+  "donation_option4_amount": "€100",
+  "donation_option4_title": "Champion",
+  "donation_option4_desc": "Fund the development of new course content.",
+  
+  "donation_option_custom": "Custom amount",
+  
+  "donate_button": "Donate",
+  "thankyou_title": "Thank You for Your Support",
+  "thankyou_message": "Your contribution makes a real difference in helping students develop the skills they need to create meaningful connections with seniors."
+}

@@ -16,8 +16,8 @@ export default async function ForSeniorsPage({ params: { locale } }) {
     <div className="bg-white min-h-screen">
       {/* Page Header */}
       <ServerPageHeader
-        title={t("page_title") || "HomeShare: A Solution Made for Seniors"}
-        subtitle={t("page_subtitle") || "Transform your extra space into companionship, security, and monthly income"}
+        title={t("page_title") || "Enhancing Elderly Care Homes with Student Support"}
+        subtitle={t("page_subtitle") || "Students bringing companionship, assistance, and joy to elderly care home residents"}
         backgroundImage="/images/headers/seniors-header.png"
       />
 
@@ -27,23 +27,23 @@ export default async function ForSeniorsPage({ params: { locale } }) {
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
             <AnimatedSection animation="fade-in-left">
               <div className="inline-block py-1 px-3 rounded-full bg-secondary-50 text-secondary-600 font-medium text-sm mb-5">
-                {t("for_seniors_label") || "Senior HomeShare Program"}
+                {t("for_seniors_label") || "Care Home Companion Program"}
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">
-                {t("section1_title") || "Reimagine Your Home as a Hub of Connection and Financial Security"}
+                {t("section1_title") || "Enhancing Quality of Life in Care Homes Through Intergenerational Connection"}
               </h2>
               <p className="text-lg text-gray-700 mb-4">
-                {t("section1_p1") || "Is your home filled with extra space but missing the energy it once had? Our carefully curated HomeShare program matches seniors with respectful, pre-screened students who bring life, assistance, and supplemental income to your doorstep."}
+                {t("section1_p1") || "Is your care home looking to enhance residents' quality of life and provide more social interaction? Our carefully curated program matches care homes with respectful, pre-screened students who bring energy, assistance, and companionship to your residents."}
               </p>
               <p className="text-lg text-gray-700 mb-6">
-                {t("section1_p2") || "Experience the perfect balance of independence and support: meaningful companionship when you desire it, help with daily tasks when you need it, and reliable monthly income that enhances your financial freedom."}
+                {t("section1_p2") || "Experience meaningful improvement in residents' wellbeing: genuine companionship during regular visits, help with digital skills and daily activities, and a renewed sense of connection to the community."}
               </p>
               <ButtonLink 
                 href={`/${locale}/how-it-works`}
                 variant="ghost"
                 className="text-secondary-600 hover:text-secondary-700 inline-flex items-center"
               >
-                {t("learn_more") || "Discover how our HomeShare works"}
+                {t("learn_more") || "Discover how our Care Home Program works"}
                 <svg className="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                 </svg>
@@ -53,7 +53,7 @@ export default async function ForSeniorsPage({ params: { locale } }) {
             <AnimatedSection animation="fade-in-right" delay={200}>
               <ImageWithAnimation 
                 src="/images/seniors/seniors-companion.png" 
-                alt={t("image_alt") || "Senior homeowner and student sharing quality time over coffee in a bright living room"}
+                alt={t("image_alt") || "Student volunteer spending quality time with elderly resident in a care home common area"}
                 fill={true}
                 sizes="(max-width: 768px) 100vw, 50vw"
                 animation="float"
@@ -76,53 +76,53 @@ export default async function ForSeniorsPage({ params: { locale } }) {
                 {t("benefits_label") || "Key Advantages"}
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">
-                {t("benefits_title") || "How HomeShare Enriches Senior Lifestyles"}
+                {t("benefits_title") || "How Student Volunteers Enhance Care Home Life"}
               </h2>
               <p className="text-lg text-gray-700">
-                {t("benefits_subtitle") || "Our program is thoughtfully designed to address the specific needs of seniors, providing tangible improvements to financial security, social wellness, and quality of life."}
+                {t("benefits_subtitle") || "Our program is thoughtfully designed to address the specific needs of care home residents, providing tangible improvements to wellbeing, social engagement, and quality of life."}
               </p>
             </div>
           </AnimatedSection>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
             <FeatureCard
-              title={t("benefit1_title") || "Sustainable Income Stream"}
-              description={t("benefit1_desc") || "Generate $500-$1,200+ monthly from your unused space. This dependable income can cover utilities, property taxes, healthcare costs, or enhance your retirement lifestyle."}
+              title={t("benefit1_title") || "Genuine Social Connection"}
+              description={t("benefit1_desc") || "Regular visits from dedicated student volunteers provide residents with authentic social interactions that combat loneliness and isolation. These consistent relationships become meaningful highlights in residents' weekly routines."}
               colorScheme="secondary"
             >
-              <span className="text-2xl">💰</span>
+              <span className="text-2xl">💭</span>
             </FeatureCard>
             <FeatureCard
               title={t("benefit2_title") || "Meaningful Companionship"}
-              description={t("benefit2_desc") || "Enjoy stimulating conversations and shared activities that combat isolation without sacrificing privacy. Our carefully matched students respect your space while providing welcome social connection."}
+              description={t("benefit2_desc") || "Students provide focused attention and genuine companionship during their visits, engaging in conversation, games, reading, or simply being present. These interactions are especially valuable for residents with limited family contact."}
               colorScheme="secondary"
             >
               <span className="text-2xl">👥</span>
             </FeatureCard>
             <FeatureCard
-              title={t("benefit3_title") || "Age in Place Confidently"}
-              description={t("benefit3_desc") || "Remain in your cherished home and community longer with added financial resources and household support. HomeShare provides an alternative to downsizing or assisted living while maintaining your independence."}
+              title={t("benefit3_title") || "Digital Skills Support"}
+              description={t("benefit3_desc") || "Students help residents connect with technology, assisting with video calls to family, browsing the internet, enjoying digital entertainment, or learning new tech skills that help them stay connected to the modern world."}
               colorScheme="secondary"
             >
-              <span className="text-2xl">🏠</span>
+              <span className="text-2xl">📱</span>
             </FeatureCard>
             <FeatureCard
               title={t("benefit4_title") || "Intergenerational Exchange"}
-              description={t("benefit4_desc") || "Experience the vitality of cross-generational relationships. Share your wisdom while gaining fresh perspectives and energy from your student companion. Many of our matches develop lasting, family-like bonds."}
+              description={t("benefit4_desc") || "Experience the vitality of cross-generational relationships. Residents share their wisdom and life stories while gaining fresh perspectives and energy from their student companions. Many of these connections develop into lasting bonds."}
               colorScheme="secondary"
             >
               <span className="text-2xl">🌱</span>
             </FeatureCard>
             <FeatureCard
-              title={t("benefit5_title") || "Enhanced Security"}
-              description={t("benefit5_desc") || "Enjoy greater peace of mind knowing someone is present in your home, particularly during evenings or when traveling. Many homeowners report feeling significantly safer with a trusted companion in the house."}
+              title={t("benefit5_title") || "Enhanced Wellbeing"}
+              description={t("benefit5_desc") || "Regular social interaction with student volunteers has been shown to improve cognitive function, reduce depression, and enhance overall wellbeing among elderly residents. The program brings new energy and enthusiasm to the care home environment."}
               colorScheme="secondary"
             >
-              <span className="text-2xl">🔒</span>
+              <span className="text-2xl">🌟</span>
             </FeatureCard>
             <FeatureCard
-              title={t("benefit6_title") || "Practical Support"}
-              description={t("benefit6_desc") || "Receive help with technology challenges, household tasks, and occasional errands. Many students assist with smartphone use, computer issues, garden maintenance, pet care, or grocery shopping as part of their arrangement."}
+              title={t("benefit6_title") || "Community Connection"}
+              description={t("benefit6_desc") || "Students bring the outside world into care homes, sharing current events, local news, and community happenings. This connection helps residents feel more engaged with the wider community and less isolated in their living environment."}
               colorScheme="secondary"
             >
               <span className="text-2xl">🤝</span>
@@ -140,10 +140,10 @@ export default async function ForSeniorsPage({ params: { locale } }) {
                 {t("how_it_works_label") || "Our Approach"}
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">
-                {t("how_it_works_title") || "Your Journey to Successful Home Sharing"}
+                {t("how_it_works_title") || "Implementing Student Visits in Your Care Home"}
               </h2>
               <p className="text-lg text-gray-700">
-                {t("how_it_works_subtitle") || "We've refined our matching process through years of experience, prioritizing safety, compatibility, and mutual satisfaction. Every step is designed with your comfort in mind."}
+                {t("how_it_works_subtitle") || "We've refined our process through years of experience, prioritizing safety, compatibility, and positive impact. Every step is designed with your residents' wellbeing in mind."}
               </p>
             </div>
           </AnimatedSection>
@@ -154,9 +154,9 @@ export default async function ForSeniorsPage({ params: { locale } }) {
                 <div className="bg-primary-50 rounded-full w-16 h-16 flex items-center justify-center mb-6">
                   <span className="text-2xl font-bold text-primary-600">1</span>
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-gray-800">{t("step1_title") || "Personalized Consultation"}</h3>
+                <h3 className="text-xl font-bold mb-4 text-gray-800">{t("step1_title") || "Initial Consultation"}</h3>
                 <p className="text-gray-700">
-                  {t("step1_desc") || "Begin with a no-obligation conversation with our senior specialist who will explain the program, answer your questions, and help you determine if HomeShare is right for you."}
+                  {t("step1_desc") || "Begin with a conversation with our care home specialist who will explain the program, answer your questions, and help determine how student visits can best benefit your residents."}
                 </p>
               </div>
             </AnimatedSection>
@@ -166,9 +166,9 @@ export default async function ForSeniorsPage({ params: { locale } }) {
                 <div className="bg-primary-50 rounded-full w-16 h-16 flex items-center justify-center mb-6">
                   <span className="text-2xl font-bold text-primary-600">2</span>
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-gray-800">{t("step2_title") || "Home Assessment"}</h3>
+                <h3 className="text-xl font-bold mb-4 text-gray-800">{t("step2_title") || "Facility Assessment"}</h3>
                 <p className="text-gray-700">
-                  {t("step2_desc") || "Our coordinator visits your home to understand your living space, discuss your preferences and lifestyle, and help establish guidelines for your ideal home-sharing arrangement."}
+                  {t("step2_desc") || "Our coordinator visits your care home to understand the environment, discuss resident needs and interests, and help establish guidelines for successful student volunteer interactions."}
                 </p>
               </div>
             </AnimatedSection>
@@ -178,9 +178,9 @@ export default async function ForSeniorsPage({ params: { locale } }) {
                 <div className="bg-primary-50 rounded-full w-16 h-16 flex items-center justify-center mb-6">
                   <span className="text-2xl font-bold text-primary-600">3</span>
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-gray-800">{t("step3_title") || "Careful Matching"}</h3>
+                <h3 className="text-xl font-bold mb-4 text-gray-800">{t("step3_title") || "Student Selection"}</h3>
                 <p className="text-gray-700">
-                  {t("step3_desc") || "Using our proprietary compatibility algorithm and personal insights from our team, we identify potential student matches who have been thoroughly screened, interviewed, and background-checked."}
+                  {t("step3_desc") || "We identify suitable student volunteers who have been thoroughly screened, interviewed, and background-checked. Students receive training specific to working with elderly residents before their first visit."}
                 </p>
               </div>
             </AnimatedSection>
@@ -192,7 +192,7 @@ export default async function ForSeniorsPage({ params: { locale } }) {
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-gray-800">{t("step4_title") || "Ongoing Support"}</h3>
                 <p className="text-gray-700">
-                  {t("step4_desc") || "Our relationship continues with regular check-ins, mediation if needed, and prompt assistance with any concerns. We're just a phone call away throughout your entire HomeShare experience."}
+                  {t("step4_desc") || "Our relationship continues with regular check-ins, feedback collection, and prompt assistance with any concerns. We monitor program effectiveness and make adjustments to ensure maximum benefit to your residents."}
                 </p>
               </div>
             </AnimatedSection>
@@ -218,7 +218,7 @@ export default async function ForSeniorsPage({ params: { locale } }) {
             <AnimatedSection animation="fade-in-right">
               <ImageWithAnimation
                 src="/images/seniors/seniors-trust.png"
-                alt={t("trust_image_alt") || "HomeShare coordinator discussing safety measures with a senior homeowner"}
+                alt={t("trust_image_alt") || "Program coordinator discussing safety procedures with care home staff"}
                 fill={true}
                 sizes="(max-width: 768px) 100vw, 50vw"
                 animation="float"
@@ -231,13 +231,13 @@ export default async function ForSeniorsPage({ params: { locale } }) {
             
             <AnimatedSection animation="fade-in-left" delay={200}>
               <div className="inline-block py-1 px-3 rounded-full bg-primary-50 text-primary-600 font-medium text-sm mb-5">
-                {t("safety_label") || "Your Safety Is Non-Negotiable"}
+                {t("safety_label") || "Resident Safety Is Our Priority"}
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">
-                {t("safety_title") || "Industry-Leading Security Standards"}
+                {t("safety_title") || "Industry-Leading Safety Standards"}
               </h2>
               <p className="text-lg text-gray-700 mb-4">
-                {t("safety_p1") || "We recognize that inviting someone into your home requires extraordinary trust. That's why we've developed the most comprehensive vetting system in the home-sharing industry, with safeguards exceeding those of most rental arrangements."}
+                {t("safety_p1") || "We recognize that introducing volunteers into care home environments requires extraordinary trust. That's why we've developed one of the most comprehensive vetting systems in the industry, with safeguards ensuring only the most suitable students participate."}
               </p>
               <div className="space-y-4 mb-6">
                 <div className="flex items-start">
@@ -254,7 +254,7 @@ export default async function ForSeniorsPage({ params: { locale } }) {
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <p className="text-gray-700">{t("safety_check2") || "Personal interviews, character references, and compatibility profiling with our trained matching specialists"}</p>
+                  <p className="text-gray-700">{t("safety_check2") || "Personal interviews, character references, and personality assessments with our trained specialist team"}</p>
                 </div>
                 <div className="flex items-start">
                   <div className="bg-green-100 rounded-full p-1 mr-3 mt-1">
@@ -262,7 +262,7 @@ export default async function ForSeniorsPage({ params: { locale } }) {
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <p className="text-gray-700">{t("safety_check3") || "Legally-reviewed HomeShare agreements that clearly define boundaries, responsibilities, and terms for both parties"}</p>
+                  <p className="text-gray-700">{t("safety_check3") || "Comprehensive training for all student volunteers on elder care best practices, boundaries, and care home protocols"}</p>
                 </div>
                 <div className="flex items-start">
                   <div className="bg-green-100 rounded-full p-1 mr-3 mt-1">
@@ -270,7 +270,7 @@ export default async function ForSeniorsPage({ params: { locale } }) {
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <p className="text-gray-700">{t("safety_check4") || "Dedicated support coordinator assigned to each match with scheduled check-ins and 24/7 emergency assistance"}</p>
+                  <p className="text-gray-700">{t("safety_check4") || "Regular supervision and evaluation of volunteer interactions, with feedback collection from both residents and care home staff"}</p>
                 </div>
               </div>
               <ButtonLink
@@ -297,37 +297,37 @@ export default async function ForSeniorsPage({ params: { locale } }) {
                 {t("testimonials_label") || "Real Experiences"}
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">
-                {t("testimonials_title") || "What Our Senior HomeShare Members Say"}
+                {t("testimonials_title") || "What Care Home Partners Say"}
               </h2>
               <p className="text-lg text-gray-700">
-                {t("testimonials_subtitle") || "Read firsthand accounts from seniors who discovered new possibilities through our program. These authentic stories reflect the life-changing impact of home-sharing."}
+                {t("testimonials_subtitle") || "Read firsthand accounts from care home administrators and staff who have witnessed the positive impact of our student volunteer program on their residents' wellbeing."}
               </p>
             </div>
           </AnimatedSection>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
             <TestimonialCard
-              quote={t("testimonial1_quote") || "HomeShare changed everything for me. My student Jennifer helps me navigate my iPad, accompanies me on walks, and the extra $850 monthly covers my property taxes. I've gained both financial security and a delightful companion who brings laughter back into my home."}
-              name={t("testimonial1_author") || "Margaret P., 72"}
-              role={t("testimonial1_location") || "HomeShare member for 2+ years"}
+              quote={t("testimonial1_quote") || "The student volunteers have transformed our care home atmosphere. Residents eagerly anticipate their visits each week. We've seen noticeable improvements in mood, engagement, and even cognitive function among residents who regularly interact with our student volunteers."}
+              name={t("testimonial1_author") || "Margaret P., 52"}
+              role={t("testimonial1_location") || "Care Home Director for 8+ years"}
               imageSrc="/images/contact/testimonials/testimonial1.jpg"
               rating={5}
               colorScheme="secondary"
               sizes="(max-width: 768px) 100vw, 33vw"
             />
             <TestimonialCard
-              quote={t("testimonial2_quote") || "After losing my wife, the silence in our home was deafening. My student Carlos has brought life back into these rooms. We share dinner twice weekly, and he's teaching me Spanish. I sleep better knowing someone else is in the house, and the rental income has been a tremendous help with medical expenses."}
-              name={t("testimonial2_author") || "Robert K., 76"}
-              role={t("testimonial2_location") || "HomeShare member for 3 years"}
+              quote={t("testimonial2_quote") || "As head of activities, I was skeptical about integrating students into our program. Now I'm amazed by how quickly they've connected with our residents. The students bring fresh energy and ideas, and they're particularly helpful with technology that lets our residents connect with family members more frequently."}
+              name={t("testimonial2_author") || "Robert K., 46"}
+              role={t("testimonial2_location") || "Activities Coordinator for 12 years"}
               imageSrc="/images/contact/testimonials/testimonial2.jpg"
               rating={5}
               colorScheme="secondary"
               sizes="(max-width: 768px) 100vw, 33vw"
             />
             <TestimonialCard
-              quote={t("testimonial3_quote") || "I was initially hesitant, but HomeShare's thorough screening process reassured me. My match with Sarah has been perfect—she respects my routines and privacy, while providing delightful company when I'm in the mood. She keeps my garden thriving and helps me stay connected with my grandchildren through video calls. The additional income has allowed me to take a vacation for the first time in years."}
-              name={t("testimonial3_author") || "Elizabeth W., 79"}
-              role={t("testimonial3_location") || "HomeShare member since 2022"}
+              quote={t("testimonial3_quote") || "The program has been wonderful for our facility. The thorough screening and training process reassured our staff and families. The students show genuine compassion and patience with our residents, and their consistent weekly visits have become a highlight. We've noticed particular benefits for residents with fewer family visitors."}
+              name={t("testimonial3_author") || "Elizabeth W., 49"}
+              role={t("testimonial3_location") || "Resident Care Manager since 2019"}
               imageSrc="/images/contact/testimonials/testimonial1-alt.png"
               rating={5}
               colorScheme="secondary"
@@ -361,10 +361,10 @@ export default async function ForSeniorsPage({ params: { locale } }) {
                 {t("faq_label") || "Questions Answered"}
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">
-                {t("faq_title") || "What Senior Homeowners Want to Know"}
+                {t("faq_title") || "What Care Homes Want to Know"}
               </h2>
               <p className="text-lg text-gray-700">
-                {t("faq_subtitle") || "We've compiled answers to the questions we hear most frequently from potential HomeShare members. If your question isn't answered here, our team is just a phone call away."}
+                {t("faq_subtitle") || "We've compiled answers to the questions we hear most frequently from care home administrators considering our program. If your question isn't answered here, our team is just a phone call away."}
               </p>
             </div>
           </AnimatedSection>
@@ -373,29 +373,29 @@ export default async function ForSeniorsPage({ params: { locale } }) {
             <div className="space-y-6">
               <AnimatedSection animation="fade-in-up" delay={100}>
                 <div className="bg-white rounded-xl shadow-md p-6">
-                  <h3 className="text-xl font-bold mb-3 text-gray-800">{t("faq1_question") || "How much monthly income can I expect from HomeShare?"}</h3>
-                  <p className="text-gray-700">{t("faq1_answer") || "Monthly income typically ranges from $650-$1,500 depending on your location, space offered, and included amenities. Urban areas and private bathrooms command higher rates. Our HomeShare specialists will assess your space and advise on optimal pricing based on market data and comparable arrangements in your area."}</p>
+                  <h3 className="text-xl font-bold mb-3 text-gray-800">{t("faq1_question") || "How often would students visit our care home?"}</h3>
+                  <p className="text-gray-700">{t("faq1_answer") || "Student volunteers typically visit once or twice per week for 2-3 hours per visit. We work with each care home to establish a consistent schedule that works best for your facility and residents. Many care homes prefer to have different students visit on different days to provide more varied interaction opportunities throughout the week."}</p>
                 </div>
               </AnimatedSection>
               
               <AnimatedSection animation="fade-in-up" delay={200}>
                 <div className="bg-white rounded-xl shadow-md p-6">
-                  <h3 className="text-xl font-bold mb-3 text-gray-800">{t("faq2_question") || "What security measures ensure my safety with a student in my home?"}</h3>
-                  <p className="text-gray-700">{t("faq2_answer") || "Our industry-leading 7-point screening includes comprehensive background checks, identity verification, enrollment confirmation, reference interviews, credit assessments, in-person evaluations, and social media reviews. Only 32% of applicants pass our rigorous standards. You'll always have final approval after supervised in-person meetings, and we maintain regular oversight throughout the arrangement."}</p>
+                  <h3 className="text-xl font-bold mb-3 text-gray-800">{t("faq2_question") || "How are students selected and prepared for working with our residents?"}</h3>
+                  <p className="text-gray-700">{t("faq2_answer") || "Our rigorous selection process includes comprehensive background checks, interviews, reference checks, and personality assessments. Only 32% of applicants pass our standards. Selected students then complete our training program covering elder care basics, dementia awareness, communication techniques, boundaries, and emergency protocols. All students must demonstrate appropriate skills and understanding before their first visit."}</p>
                 </div>
               </AnimatedSection>
               
               <AnimatedSection animation="fade-in-up" delay={300}>
                 <div className="bg-white rounded-xl shadow-md p-6">
-                  <h3 className="text-xl font-bold mb-3 text-gray-800">{t("faq3_question") || "What happens if my HomeShare arrangement isn't working out?"}</h3>
-                  <p className="text-gray-700">{t("faq3_answer") || "While 94% of our matches continue successfully, we understand that sometimes things don't work as planned. All arrangements include a 2-week trial period and straightforward exit provisions. Our dedicated mediators can often resolve minor issues, but if relocation becomes necessary, we'll quickly begin searching for a more suitable match while ensuring a smooth transition."}</p>
+                  <h3 className="text-xl font-bold mb-3 text-gray-800">{t("faq3_question") || "What types of activities do student volunteers do with residents?"}</h3>
+                  <p className="text-gray-700">{t("faq3_answer") || "Activities are tailored to residents' interests and abilities, including conversation, reading together, art projects, music, games, technology assistance, gentle exercise, or simply companionable presence. We work with your activities coordinator to identify where students can add the most value, either in group settings or one-on-one interactions. Students receive guidance on adapting activities for various physical and cognitive abilities."}</p>
                 </div>
               </AnimatedSection>
               
               <AnimatedSection animation="fade-in-up" delay={400}>
                 <div className="bg-white rounded-xl shadow-md p-6">
-                  <h3 className="text-xl font-bold mb-3 text-gray-800">{t("faq4_question") || "How much interaction will I have with my student housemate?"}</h3>
-                  <p className="text-gray-700">{t("faq4_answer") || "Your HomeShare experience is customized to your social preferences. Some members enjoy regular shared meals and activities, while others prefer more independent arrangements with occasional check-ins. During our intake process, we'll discuss your ideal balance of interaction and privacy, and match you accordingly. All expectations are documented in our HomeShare Agreement, which can be adjusted as your relationship evolves."}</p>
+                  <h3 className="text-xl font-bold mb-3 text-gray-800">{t("faq4_question") || "How do you monitor program effectiveness and student performance?"}</h3>
+                  <p className="text-gray-700">{t("faq4_answer") || "We employ a multi-faceted monitoring approach including regular check-ins with care home staff, feedback collection from residents, student self-assessments, and occasional observation visits. After the first month, we conduct a comprehensive review and make any necessary adjustments. Quarterly evaluations measure impact metrics such as resident engagement levels, mood improvements, and staff satisfaction. If a student isn't meeting expectations, we can quickly arrange a replacement."}</p>
                 </div>
               </AnimatedSection>
             </div>
@@ -419,9 +419,9 @@ export default async function ForSeniorsPage({ params: { locale } }) {
 
       {/* Call to Action */}
       <CallToAction
-        title={t("cta_title") || "Transform Your Extra Space into Financial Security and Meaningful Connection"}
-        subtitle={t("cta_subtitle") || "Join over 5,000 seniors who have discovered the perfect balance of independence, income, and companionship through our HomeShare program."}
-        buttonText={t("cta_button") || "Begin Your HomeShare Journey"}
+        title={t("cta_title") || "Enhance Your Care Home with Intergenerational Connection"}
+        subtitle={t("cta_subtitle") || "Join over 120 care homes that have discovered how student volunteers can bring energy, compassion, and joy to their elderly residents."}
+        buttonText={t("cta_button") || "Start Your Care Home Program"}
         buttonLink={`/${locale}/contact`}
         variant="accent"
         withAnimation={true}
