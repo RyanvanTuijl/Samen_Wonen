@@ -12,6 +12,7 @@ interface CTAProps {
   shape?: 'rounded' | 'wave';
   withPattern?: boolean;
   withAnimation?: boolean;
+  buttonClassName?: string; // Add new prop for button customization
 }
 
 const CallToAction: React.FC<CTAProps> = ({
@@ -22,7 +23,8 @@ const CallToAction: React.FC<CTAProps> = ({
   variant = 'gradient',
   shape = 'rounded',
   withPattern = true,
-  withAnimation = true
+  withAnimation = true,
+  buttonClassName = '' // Default to empty string
 }) => {
   // Variant styles
   const variantStyles = {
@@ -99,7 +101,8 @@ const CallToAction: React.FC<CTAProps> = ({
                 className={cn(
                   "shadow-lg hover:shadow-xl",
                   variant === 'gradient' ? "text-primary-600" : "",
-                  variant === 'accent' ? "text-secondary-600" : ""
+                  variant === 'accent' ? "text-secondary-600" : "",
+                  buttonClassName // Add the custom button class name
                 )}
               >
                 {buttonText}
@@ -113,7 +116,8 @@ const CallToAction: React.FC<CTAProps> = ({
               className={cn(
                 "shadow-lg hover:shadow-xl",
                 variant === 'gradient' ? "text-primary-600" : "",
-                variant === 'accent' ? "text-secondary-600" : ""
+                variant === 'accent' ? "text-secondary-600" : "",
+                buttonClassName // Add the custom button class name
               )}
             >
               {buttonText}

@@ -169,8 +169,8 @@ export default async function OpportunitiesPage({ params: { locale } }: { params
     <div className="bg-white min-h-screen">
       {/* Page Header */}
       <ServerPageHeader
-        title={t('opportunities_title')}
-        subtitle={t('opportunities_subtitle')}
+        title="Housing Opportunities"
+        subtitle="Discover affordable and community-focused housing options"
         backgroundImage="/images/headers/homes-header.png"
       />
       
@@ -178,36 +178,35 @@ export default async function OpportunitiesPage({ params: { locale } }: { params
       <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">{t('opportunities_intro_title')}</h2>
+            <h2 className="text-3xl font-bold mb-6">Find Your Perfect Housing Match</h2>
             <p className="text-lg text-gray-700 mb-8">
-              {t('opportunities_intro_text')}
+              Browse our selection of available housing opportunities across multiple cities. Whether you're a student looking for affordable housing or someone interested in our home sharing program, we have options for you.
             </p>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
-              <div className="text-center p-4 rounded-lg bg-gray-50">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">              <div className="text-center p-4 rounded-lg bg-gray-50">
                 <div className="text-3xl font-bold text-primary-600">{locations.length}</div>
-                <p className="text-sm text-gray-600">{t('total_locations')}</p>
+                <p className="text-sm text-gray-600">Total Locations</p>
               </div>
               
               <div className="text-center p-4 rounded-lg bg-gray-50">
                 <div className="text-3xl font-bold text-primary-600">
                   {locations.filter(loc => loc.type === 'active').length}
                 </div>
-                <p className="text-sm text-gray-600">{t('active_locations')}</p>
+                <p className="text-sm text-gray-600">Active Locations</p>
               </div>
               
               <div className="text-center p-4 rounded-lg bg-gray-50">
                 <div className="text-3xl font-bold text-primary-600">
                   {locations.filter(loc => loc.type === 'coming_soon').length}
                 </div>
-                <p className="text-sm text-gray-600">{t('coming_soon')}</p>
+                <p className="text-sm text-gray-600">Coming Soon</p>
               </div>
               
               <div className="text-center p-4 rounded-lg bg-gray-50">
                 <div className="text-3xl font-bold text-primary-600">
                   {cities.length}
                 </div>
-                <p className="text-sm text-gray-600">{t('cities')}</p>
+                <p className="text-sm text-gray-600">Cities</p>
               </div>
             </div>
           </div>
@@ -217,7 +216,7 @@ export default async function OpportunitiesPage({ params: { locale } }: { params
       {/* Main content section with filters and location cards */}
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-8 text-center">{t('browse_locations')}</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center">Available Locations</h2>
           
           <div className="max-w-6xl mx-auto">
             {/* Client-side filters component */}
@@ -230,9 +229,9 @@ export default async function OpportunitiesPage({ params: { locale } }: { params
       <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">{t('view_on_map')}</h2>
+            <h2 className="text-3xl font-bold mb-6">Explore Our Locations</h2>
             <p className="text-lg text-gray-700 mb-8">
-              {t('map_description')}
+              Use our interactive map to see all available housing locations and find one near you. You can filter by city, status, and other preferences.
             </p>
             
             <ButtonLink

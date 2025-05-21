@@ -123,6 +123,7 @@ export default async function CoursesPage({ params: { locale } }: { params: { lo
         variant="gradient"
         shape="rounded"
         withPattern={true}
+        buttonClassName="bg-white text-primary-600 hover:bg-gray-100"
       />
     </div>
   );
