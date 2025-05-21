@@ -116,10 +116,6 @@ export default function Navigation({ isHome = false }: NavigationProps) {
         { 
           label: t('faq_title'),
           path: '/faq'
-        },
-        { 
-          label: t('nav_blog'),
-          path: '/blog'
         }
       ]
     },
