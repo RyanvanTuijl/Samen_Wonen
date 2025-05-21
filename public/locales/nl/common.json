@@ -5,6 +5,9 @@
   "nav_for_seniors": "Voor ouderen",
   "nav_for_homes": "Voor verzorgingstehuizen",
   "nav_for_municipalities": "Voor gemeenten",
+  "nav_for_who": "Voor wie",
+  "nav_resources": "Bronnen",
+  "nav_blog": "Blog",
   "nav_courses": "Cursussen",
   "nav_contact": "Contact",
 
@@ -48,6 +51,7 @@
   "blog_read_more": "Lees Meer",
 
   "faq_title": "Veelgestelde Vragen",
+  "faq_subtitle": "Vind antwoorden op veelvoorkomende vragen over onze diensten en programma",
 
   "stat_matches": "Succesvolle Matches",
   "stat_homes": "Deelnemende Verzorgingshuizen",

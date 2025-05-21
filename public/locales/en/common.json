@@ -5,6 +5,9 @@
   "nav_for_seniors": "For seniors",
   "nav_for_homes": "For care homes",
   "nav_for_municipalities": "For municipalities",
+  "nav_for_who": "For whom",
+  "nav_resources": "Resources",
+  "nav_blog": "Blog",
   "nav_courses": "Courses",
   "nav_contact": "Contact",
 
@@ -48,6 +51,7 @@
   "blog_read_more": "Read More",
 
   "faq_title": "Frequently Asked Questions",
+  "faq_subtitle": "Find answers to common questions about our services and program",
 
   "stat_matches": "Successful Matches",
   "stat_homes": "Participating Care Homes",
