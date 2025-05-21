@@ -24,21 +24,7 @@ const Popup = dynamic(
   () => import('react-leaflet').then((mod) => mod.Popup),
   { ssr: false }
 );
-// Define the MarkerClusterGroup props interface
-interface MarkerClusterGroupProps {
-  children: React.ReactNode;
-  chunkedLoading?: boolean;
-  maxClusterRadius?: number;
-  spiderfyOnMaxZoom?: boolean;
-  showCoverageOnHover?: boolean;
-  zoomToBoundsOnClick?: boolean;
-}
-
-const MarkerClusterGroup = dynamic<MarkerClusterGroupProps>(
-  () => import('@changey/react-leaflet-markercluster').then((mod) => mod.default),
-  { ssr: false }
-);
-// Import the Leaflet types for TypeScript support
+// Define the Leaflet types for TypeScript support
 import type { Icon as LeafletIcon } from 'leaflet';
 import type { Location } from '../data/locationsData';
 import { locations } from '../data/locationsData';
@@ -214,36 +200,28 @@ export default function InteractiveMap() {
                   console.log('Tile layer loaded');
                 }
               }}
-            />
-            {mapLoaded && activeIcon && comingSoonIcon && (
-              <MarkerClusterGroup
-                chunkedLoading
-                maxClusterRadius={50}
-                spiderfyOnMaxZoom
-                showCoverageOnHover={false}
-                zoomToBoundsOnClick
-              >
-                {locations.map((location) => (
-                  <Marker
-                    key={location.id}
-                    position={[location.coordinates.lat, location.coordinates.lng]}
-                    icon={location.type === 'active' ? activeIcon : comingSoonIcon}
-                    eventHandlers={{
-                      click: () => setSelectedLocation(location),
-                    }}
-                  >
-                    <Popup className="map-popup">
-                      <div className="p-2">
-                        <h3 className="font-bold">{location.name}</h3>
-                        <p className="text-sm text-gray-600">{location.city}</p>
-                        <span className={`inline-block px-2 py-1 rounded text-xs ${location.type === 'active' ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'}`}>
-                          {t(location.type === 'active' ? 'map_status_active' : 'map_status_soon')}
-                        </span>
-                      </div>
-                </Popup>
-              </Marker>
-            ))}
-              </MarkerClusterGroup>
+            />            {mapLoaded && activeIcon && comingSoonIcon && (
+              /* Directly showing all markers without clustering */
+              locations.map((location) => (
+                <Marker
+                  key={location.id}
+                  position={[location.coordinates.lat, location.coordinates.lng]}
+                  icon={location.type === 'active' ? activeIcon : comingSoonIcon}
+                  eventHandlers={{
+                    click: () => setSelectedLocation(location),
+                  }}
+                >
+                  <Popup className="map-popup">
+                    <div className="p-2">
+                      <h3 className="font-bold">{location.name}</h3>
+                      <p className="text-sm text-gray-600">{location.city}</p>
+                      <span className={`inline-block px-2 py-1 rounded text-xs ${location.type === 'active' ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'}`}>
+                        {t(location.type === 'active' ? 'map_status_active' : 'map_status_soon')}
+                      </span>
+                    </div>
+                  </Popup>
+                </Marker>
+              ))
             )}
           </MapContainer>
         </div>
